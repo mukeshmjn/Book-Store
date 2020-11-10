@@ -1,0 +1,109 @@
+
+<img src="/assets/book.jpg" id= "apu"alt="book">
+
+<!-- <div class="container">
+  fjbvbh
+  bkjvfb
+  <p>vhjbvc</p>
+</div> -->
+
+<div class="container" fxLayout="row-wrap"
+  fxLayoutWrap
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px">
+    
+<mat-card *ngFor='let doc of books' fxflex="30%"  class="bookscard">
+  <img  mat-card-image src="{{doc.image}}" alt="it book" class="itb">
+  <mat-card-title class="tit">
+   <p  #book1="ngModel" [(ngModel)]="doc.book1">{{doc.book1}} </p> 
+   <br>
+   <p >${{doc.price}}</p>
+  <mat-card-actions>
+    <button class="byt" mat-flat-button color="primary"(click)="openSnackBar()" aria-label="Show an example snack-bar"  (click)="addtocart(doc,doc.id)">Add to Cart</button>
+    <button style="margin-top:10px" routerLink="/productdetails" (click)= "productDetails(doc)" class="byt" mat-flat-button color="primary">Details</button>
+  </mat-card-actions>
+  </mat-card-title>
+</mat-card>
+
+<mat-card fxflex="30%"  class="bookscard">
+  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
+  <mat-card-title class="tit">
+   <p >IT | Stephen King </p> 
+   <br>
+   <p>$50</p>
+  <mat-card-actions>
+    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
+  </mat-card-actions>
+  </mat-card-title>
+</mat-card>
+
+<mat-card fxflex="30%"  class="bookscard">
+  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
+  <mat-card-title class="tit">
+   <p>IT | Stephen King </p> 
+   <br>
+   <p>$50</p>
+  <mat-card-actions>
+    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
+  </mat-card-actions>
+  </mat-card-title>
+</mat-card>
+
+<mat-card fxflex="30%"  class="bookscard">
+  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
+  <mat-card-title class="tit">
+   <p>IT | Stephen King </p> 
+   <br>
+   <p>$50</p>
+  <mat-card-actions>
+    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
+  </mat-card-actions>
+  </mat-card-title>
+</mat-card>
+
+<mat-card fxflex="30%"  class="bookscard">
+  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
+  <mat-card-title class="tit">
+   <p>IT | Stephen King </p> 
+   <br>
+   <p>$50</p>
+  <mat-card-actions>
+    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
+  </mat-card-actions>
+  </mat-card-title>
+</mat-card>
+
+
+<mat-card fxflex="30%"  class="bookscard">
+  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
+  <mat-card-title class="tit">
+   <p>IT | Stephen King </p> 
+   <br>
+   <p>$50</p>
+  <mat-card-actions>
+    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
+  </mat-card-actions>
+  </mat-card-title>
+</mat-card>
+
+
+<mat-card fxflex="30%"  class="bookscard">
+  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
+  <mat-card-title class="tit">
+   <p>IT | Stephen King </p> 
+   <br>
+   <p>$50</p>
+  <mat-card-actions>
+    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
+  </mat-card-actions>
+  </mat-card-title>
+</mat-card>
+
+
+
+
+  </div>
+

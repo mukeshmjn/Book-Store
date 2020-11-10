@@ -1,0 +1,50 @@
+
+.product-img {
+    border-radius: 3px;
+  }
+  
+  .number-input {
+    border: 1px solid #ced4da;
+    width: 8.6rem;
+    border-radius: .25rem;
+  }
+  
+  button, input {
+    overflow: visible;
+    border: 0px;
+  }
+  
+  input[type=number] {
+    max-width: 2rem;
+  }
+  
+  .btn:hover, .btn:focus {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.14), 0 4px 15px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.14), 0 4px 15px 0 rgba(0,0,0,0.12);
+  }
+  
+  .card {
+    padding: 10px;
+    font-weight: 300;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05);
+    border-radius: .375rem;
+    border: 0px;
+  }
+  
+  .card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0 !important;
+  }
+  
+  .z-depth-1 {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.07),0 2px 10px 0 rgba(0,0,0,0.07) !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.07),0 2px 10px 0 rgba(0,0,0,0.07) !important;
+  }
+  
+  .btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: #15076b;
+    font-weight: 600;
+  }

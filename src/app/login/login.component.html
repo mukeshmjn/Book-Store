@@ -1,0 +1,55 @@
+<div >
+    
+    <!-- this header tag displays only when user is logged-in -->
+    <h1 *ngIf="authService.user | async">
+        Welcome User: {{ (authService.user | async)?.email }}!
+    </h1>
+  
+
+    <!-- this div displays only when user is not-logged-in -->
+    <mat-card *ngIf="!(authService.user | async)" >
+        <mat-toolbar color="primary" style="margin-left:-18px ;margin-top:-15px; width:435px">
+            <span style="margin-left:120px">LOGIN / SIGNUP</span>
+          </mat-toolbar>
+        <!-- these input fields takes email and password from user -->
+        <!-- <input type="text" [(ngModel)]="email" placeholder="Enter email"/> -->
+        <mat-form-field appearance="standard" style="margin-top:10px">
+            <mat-label>Enter your email id</mat-label>
+            <input matInput placeholder=""  [(ngModel)]="email">
+           
+            <mat-hint>for eg. abc@gmail.com</mat-hint>
+          </mat-form-field>
+          <br>
+          <br>
+        <!-- <input type="password" [(ngModel)]="password" placeholder="Enter password"/> -->
+
+        <mat-form-field appearance="standard">
+            <mat-label>Enter your password</mat-label>
+            <input matInput type="password" placeholder=""  [(ngModel)]="password">
+           
+            <mat-hint>choose a strong password</mat-hint>
+          </mat-form-field>
+          <mat-card-actions>
+            <button mat-raised-button [disabled]="!email || !password" routerLink="/home" (click)="login()" color="primary">LOGIN</button>
+            
+            <button mat-raised-button [disabled]="!email || !password" routerLink="/home" (click)="signup()" color="primary">SIGNUP</button>
+         </mat-card-actions>
+
+
+        <!-- user click this button to signup -->
+        <!--  <button (click)="signup()" [disabled]="!email || !password">
+            Signup
+        </button> -->
+
+        <!-- user click this button to login -->
+        <!-- <button (click)="login()" [disabled]="!email || !password">
+            Login
+        </button> --> 
+    </mat-card>
+
+    <!-- user click this button to logout -->
+    <!-- this button displays only when user is logged-in -->
+    <button (click)="logout()" *ngIf="authService.user | async">
+        Logout
+    </button>
+</div>
