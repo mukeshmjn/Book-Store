@@ -26,9 +26,11 @@ export class CheckoutComponent implements OnInit {
     fname: new FormControl(''),
     lname: new FormControl(''),
     sadd: new FormControl(''),
+    mark: new FormControl(''),
     city: new FormControl(''),
-    country: new FormControl(''),
+
     state: new FormControl(''),
+    zip: new FormControl('')
     // lname: new FormControl(''),
     // lname: new FormControl(''),
 
@@ -64,6 +66,7 @@ onSubmit(){
   // })
   debugger
   this.ordersplaced=this.form.value
+  debugger
   this.orders.forEach((abc)=>{
     console.log(this.orders)
     debugger
@@ -74,9 +77,10 @@ onSubmit(){
       firstName: this.ordersplaced.fname,
       lastName: this.ordersplaced.lname,
       streetAddress: this.ordersplaced.sadd,
+      mark: this.ordersplaced.mark,
       city: this.ordersplaced.city,
-      country: this.ordersplaced.country,
-      state: this.ordersplaced.state
+      state: this.ordersplaced.state,
+      zip: this.ordersplaced.zip
    })
    .then(res => {
        console.log(res);
