@@ -1,0 +1,23 @@
+2020-11-12T08:02:24.277Z - info:   [05004] *** FOLDER: d:\bookstore ***
+2020-11-12T08:02:24.283Z - info:   [05004] AzureReposVSCode/1.161.1 (VSCode 1.51.0; Windows_NT 10.0.17134; Node 12.14.1)
+2020-11-12T08:02:24.285Z - debug:  [05004] Looking for an External Context at d:\bookstore
+2020-11-12T08:02:24.285Z - debug:  [05004] No External Context at d:\bookstore
+2020-11-12T08:02:24.377Z - debug:  [05004] Looking for TFVC repository at d:\bookstore
+2020-11-12T08:02:24.382Z - debug:  [05004] TFVC Creating Tfvc object with localPath='undefined'
+2020-11-12T08:02:24.387Z - debug:  [05004] Using TFS proxy: 
+2020-11-12T08:02:24.387Z - debug:  [05004] TFVC Retrieved from settings; localPath='C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\TF.exe'
+2020-11-12T08:02:24.672Z - debug:  [05004] TFVC Repository created with repositoryRootFolder='d:\bookstore'
+2020-11-12T08:02:24.674Z - debug:  [05004] TFVC Repository.CheckVersion
+2020-11-12T08:02:24.676Z - debug:  [05004] TFVC: tf add -noprompt -?
+2020-11-12T08:02:24.787Z - debug:  [05004] TFVC: spawned new process (duration: 108ms)
+2020-11-12T08:02:24.797Z - debug:  [05004] TFVC: spawned new process (duration: 8ms)
+2020-11-12T08:03:41.052Z - debug:  [05004] TFVC: add exit code: 0 (duration: 76375ms)
+2020-11-12T08:03:41.052Z - debug:  [05004] TFVC Minimum required version: 14.102.0
+2020-11-12T08:03:41.052Z - debug:  [05004] TFVC (TF.exe, TF.cmd) version: 16.166.30224.2
+2020-11-12T08:03:41.067Z - debug:  [05004] TFVC Repository.FindWorkspace with localPath='d:\bookstore'
+2020-11-12T08:03:41.067Z - debug:  [05004] TFVC: tf workfold -noprompt d:\bookstore
+2020-11-12T08:03:41.067Z - debug:  [05004] TFVC: spawned new process (duration: 0ms)
+2020-11-12T08:03:51.592Z - debug:  [05004] TFVC: workfold exit code: 100 (duration: 10525ms)
+2020-11-12T08:03:51.594Z - debug:  [05004] TFVC errors (via stderr): Unable to determine the source control server.
+
+2020-11-12T08:03:51.596Z - error:  [05004] Could not find a workspace with mappings (e.g., not a TFVC repository, wrong version of TF is being used).
