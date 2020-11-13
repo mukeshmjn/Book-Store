@@ -8,41 +8,41 @@
       </div>
       <div class="col-sm-6">
         <div class="product-description">
-          <h5 class="product-title">Blue denim shirt</h5>
-          <p class="mb-2 text-muted text-uppercase small category">Shirts</p>
-          <ul class="rating pl-0">
-            <!-- <fa-icon [icon]="faStar"></fa-icon>
+          <h5 class="product-title">{{product.bookname}}</h5>
+          <p class="mb-2 text-muted text-uppercase small category">by {{product.author}}</p>
+          <!-- <ul class="rating pl-0">
+           <fa-icon [icon]="faStar"></fa-icon>
             <fa-icon [icon]="faStar"></fa-icon>
             <fa-icon [icon]="faStar"></fa-icon>
             <fa-icon [icon]="faStar"></fa-icon> -->
-            <span class="no-of-reviews text-lowercase pl-2 text-muted">8,453 Reviews</span>
-          </ul>
+            <!-- <span class="no-of-reviews text-lowercase pl-2 text-muted">8,453 Reviews</span> 
+          </ul> -->
+          <br>
           
           <p>
-            <span class="amount mr-1"><strong><span class="currency">₹</span> {{product.price}}</strong></span>
-            <span class="old-amount text-muted"><span class="currency">₹</span> 482.99</span>
-            <span class="discount">19% off</span>
+            <span class="amount mr-1"><strong><span class="currency">$</span> {{product.price}}</strong></span>
+            <!-- <span class="old-amount text-muted"><span class="currency">₹</span> 482.99</span>
+            <span class="discount">19% off</span> -->
           </p>
-          <p class="pt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-            sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim
-            perferendis voluptates laboriosam. Distinctio, officia quis dolore
-            quos sapiente tempore alias.
-          </p>
+          <!-- <p class="pt-1">
+           {{product.description}}
+          </p> -->
+          <!-- <br> -->
+          <br>
           <div class="table-responsive">
             <table class="table table-sm table-borderless mb-0">
               <tbody>
                 <tr>
-                  <th class="pl-0 w-25" scope="row"><strong>Model</strong></th>
-                  <td>Shirt 5407X</td>
+                  <th class="pl-0 w-25" scope="row"><strong>Pages</strong></th>
+                  <td>{{product.pages}}</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <th class="pl-0 w-25" scope="row"><strong>Color</strong></th>
                   <td>Blue</td>
-                </tr>
+                </tr> -->
                 <tr>
-                  <th class="pl-0 w-25" scope="row"><strong>Delivery</strong></th>
-                  <td>USA, Europe</td>
+                  <th class="pl-0 w-25" scope="row"><strong>Shipping</strong></th>
+                  <td>Free</td>
                 </tr>
               </tbody>
             </table>
@@ -56,7 +56,7 @@
       Description:
     </h3>
 <p>
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore consequatur consequuntur natus laboriosam quibusdam quia qui quaerat iure voluptas hic optio suscipit voluptatem minima similique ab perferendis numquam odit nostrum neque expedita nisi, aliquam asperiores. Temporibus amet doloribus voluptas reprehenderit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum commodi autem facere pariatur consectetur doloremque? Mollitia, laboriosam, quos odio tempora provident voluptas, eum qui esse labore magnam illum? Repudiandae ullam animi, doloribus consequatur voluptatibus nam quidem nemo soluta cupiditate laudantium? Maiores aspernatur porro hic, aliquam officia itaque consequuntur repellendus commodi officiis nostrum quis harum quibusdam! Veniam eum ea animi provident adipisci dolores dicta iure necessitatibus eligendi fuga, voluptate sapiente officiis, earum quidem odio placeat error itaque quae inventore rerum vitae dignissimos? Dolores, dolore. Mollitia iusto, facere ipsum quisquam vero corporis perferendis. Deserunt aut dolorum mollitia placeat, a quae similique ratione?
+  {{product.description}}
 </p>
    
   </div>

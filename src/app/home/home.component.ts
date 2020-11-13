@@ -121,9 +121,11 @@ export class HomeComponent implements OnInit {
 //   debugger
 //   console.log(abc.price)
   this.firestore.collection('cart').add({
-   book1: abc.book1,
-   image: abc.image,
+   bookname: abc.bookname,
+   author: abc.author,
    price: abc.price,
+   image:abc.image,
+   pages:abc.pages
 
 })
 .then(res => {

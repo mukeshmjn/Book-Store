@@ -1,7 +1,10 @@
 export class Home {
     id: string;
-    book1: string;
-    image: string;
+    bookname: string;
+    author:string;
     price: number;
- 
+    pages: number;
+    image: string;
+    description: string;
+
 }

@@ -21,3 +21,41 @@
 2020-11-12T08:03:51.594Z - debug:  [05004] TFVC errors (via stderr): Unable to determine the source control server.
 
 2020-11-12T08:03:51.596Z - error:  [05004] Could not find a workspace with mappings (e.g., not a TFVC repository, wrong version of TF is being used).
+2020-11-13T05:24:24.909Z - info:   [03764] *** FOLDER: d:\bookstore ***
+2020-11-13T05:24:24.911Z - info:   [03764] AzureReposVSCode/1.161.1 (VSCode 1.51.1; Windows_NT 10.0.17134; Node 12.14.1)
+2020-11-13T05:24:24.913Z - debug:  [03764] Looking for an External Context at d:\bookstore
+2020-11-13T05:24:24.913Z - debug:  [03764] No External Context at d:\bookstore
+2020-11-13T05:24:24.928Z - debug:  [03764] Looking for TFVC repository at d:\bookstore
+2020-11-13T05:24:24.929Z - debug:  [03764] TFVC Creating Tfvc object with localPath='undefined'
+2020-11-13T05:24:24.931Z - debug:  [03764] Using TFS proxy: 
+2020-11-13T05:24:24.932Z - debug:  [03764] TFVC Retrieved from settings; localPath='C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\TF.exe'
+2020-11-13T05:24:25.426Z - debug:  [03764] TFVC Repository created with repositoryRootFolder='d:\bookstore'
+2020-11-13T05:24:25.428Z - debug:  [03764] TFVC Repository.CheckVersion
+2020-11-13T05:24:25.430Z - debug:  [03764] TFVC: tf add -noprompt -?
+2020-11-13T05:24:26.464Z - debug:  [03764] TFVC: spawned new process (duration: 1032ms)
+2020-11-13T05:24:26.477Z - debug:  [03764] TFVC: spawned new process (duration: 11ms)
+2020-11-13T05:24:35.944Z - debug:  [03764] TFVC: add exit code: 0 (duration: 10512ms)
+2020-11-13T05:24:35.947Z - debug:  [03764] TFVC Minimum required version: 14.102.0
+2020-11-13T05:24:35.947Z - debug:  [03764] TFVC (TF.exe, TF.cmd) version: 16.166.30224.2
+2020-11-13T05:24:35.948Z - debug:  [03764] TFVC Repository.FindWorkspace with localPath='d:\bookstore'
+2020-11-13T05:24:35.949Z - debug:  [03764] TFVC: tf workfold -noprompt d:\bookstore
+2020-11-13T05:24:35.956Z - debug:  [03764] TFVC: spawned new process (duration: 5ms)
+2020-11-13T05:24:37.744Z - debug:  [03764] TFVC: workfold exit code: 100 (duration: 1794ms)
+2020-11-13T05:24:37.759Z - debug:  [03764] TFVC errors (via stderr): Unable to determine the source control server.
+
+2020-11-13T05:24:37.759Z - error:  [03764] Could not find a workspace with mappings (e.g., not a TFVC repository, wrong version of TF is being used).
+2020-11-13T09:04:11.158Z - debug:  [03764] Reinitializing due to onDidChangeConfiguration
+2020-11-13T09:04:11.214Z - debug:  [03764] Polling interval value (minutes): 5
+2020-11-13T09:04:11.214Z - debug:  [03764] Polling interval must be greater than 10 minutes.
+2020-11-13T09:04:11.599Z - info:   [03764] *** FOLDER: d:\bookstore ***
+2020-11-13T09:04:11.600Z - info:   [03764] AzureReposVSCode/1.161.1 (VSCode 1.51.1; Windows_NT 10.0.17134; Node 12.14.1)
+2020-11-13T09:04:11.602Z - debug:  [03764] Looking for an External Context at d:\bookstore
+2020-11-13T09:04:11.603Z - debug:  [03764] No External Context at d:\bookstore
+2020-11-13T09:04:12.075Z - debug:  [03764] Looking for TFVC repository at d:\bookstore
+2020-11-13T09:04:12.077Z - debug:  [03764] TFVC Creating Tfvc object with localPath='undefined'
+2020-11-13T09:04:12.079Z - debug:  [03764] Using TFS proxy: 
+2020-11-13T09:04:12.080Z - debug:  [03764] TFVC Retrieved from settings; localPath='C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\TF.exe'
+2020-11-13T09:04:12.132Z - debug:  [03764] TFVC Repository created with repositoryRootFolder='d:\bookstore'
+2020-11-13T09:04:12.134Z - debug:  [03764] TFVC Repository.CheckVersion
+2020-11-13T09:04:12.211Z - debug:  [03764] TFVC: tf add -noprompt -?
+2020-11-13T09:04:12.331Z - debug:  [03764] TFVC: spawned new process (duration: 115ms)

@@ -7,17 +7,26 @@
         <div class="col my-auto text-center">
             <h4 class="mb-0 ts" >&#8377;{{order.price}}</h4>
         </div>
+        <div class="col my-auto text-center">
+          <h4 class="mb-0 ts" >Pages: {{order.pages}}</h4>
+      </div>
         <h4 class="card-title text-dark ts">Delivery Address</h4>
         <br />
         <h5 class="card-title text-dark ts">{{order.firstName}} {{order.lastName}}</h5>
         <p class="card-text ts">
          {{order.streetAddress}}
         </p>
+        <p class="card-text ts">
+          Landmark: {{order.mark}}
+         </p>
+        <p class="card-text ts">
+          {{order.state}}
+         </p>
         <br />
-        <div>
+        <!-- <div>
           <span class="phone text-dark ts">Phone Number &nbsp; &nbsp;</span>
           <span class="number ts">7011298893</span><br><br>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

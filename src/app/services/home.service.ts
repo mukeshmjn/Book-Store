@@ -9,7 +9,7 @@ export class HomeService {
   constructor(private firestore: AngularFirestore) { }
 
   getBooks() {
-    return this.firestore.collection('home1').snapshotChanges();
+    return this.firestore.collection('home').snapshotChanges();
 }
 
 createBook(home: Home){

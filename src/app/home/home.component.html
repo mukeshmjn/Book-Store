@@ -1,5 +1,5 @@
 
-<img src="/assets/book.jpg" id= "apu"alt="book">
+<img src="/assets/book.jpg" style="margin-bottom: 70px;" id= "apu"alt="book">
 
 <!-- <div class="container">
   fjbvbh
@@ -113,9 +113,10 @@
   <div class="row">
     <div class="col-sm-3" *ngFor="let doc of books">
       <div class="card an border-info row" style="width: 12rem;"    >
-        <img class="card-img-top am" src="/assets/it.jpg" alt="Card image cap" routerLink="/productdetails" (click)= "productDetails(doc)">
-        <div class="card-body">
-          <h1 class="card-title op" (click)= "productDetails(doc)" routerLink="/productdetails">{{doc.book1}}</h1>
+        <img class="card-img-top am" src="{{doc.image}}" alt="Card image cap" routerLink="/productdetails" (click)= "productDetails(doc)">
+        <div class="card-body bb" >
+          <h1 class="card-title op" (click)= "productDetails(doc)" routerLink="/productdetails">{{doc.bookname}}</h1>
+          <h1 class="card-title op" (click)= "productDetails(doc)" routerLink="/productdetails">by {{doc.author}}</h1>
           <h1 class="card-title op" (click)= "productDetails(doc)" routerLink="/productdetails">${{doc.price}}</h1>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
           <a  class="btn btn-primary btn-lg btn-block q" (click)="addtocart(doc,doc.id)" (click)="openSnackBar()">Add To Cart</a>

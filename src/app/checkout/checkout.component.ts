@@ -71,7 +71,9 @@ onSubmit(){
     console.log(this.orders)
     debugger
     this.firestore.collection('orders').add({
-      book1: abc.book1,
+      bookname: abc.bookname,
+      author:abc.author,
+      pages:abc.pages,
       image: abc.image,
       price: abc.price,
       firstName: this.ordersplaced.fname,

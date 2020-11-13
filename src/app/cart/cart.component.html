@@ -60,7 +60,7 @@
 
           <div class="row mb-4">
             <div class="col-md-5 col-lg-3 col-xl-3">
-              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0" style="width:fit-content">
                 <img class="img-fluid product-img"
                   src="{{doc.image}}" alt="Sample" />
               </div>
@@ -69,14 +69,14 @@
               <div>
                 <div class="d-flex justify-content-between">
                   <div>
-                    <h5>Blue denim shirt</h5>
+                    <h5 style="font-size: 18px;"><strong>{{doc.bookname}}</strong></h5>
                     <p class="mb-3 text-muted text-uppercase small">
-                      Shirt - blue
+                      by {{doc.author}}
                     </p>
                     <p class="mb-2 text-muted text-uppercase small">
-                      Color: blue
+                      Pages: {{doc.pages}}
                     </p>
-                    <p class="mb-3 text-muted text-uppercase small">Size: M</p>
+                    <!-- <p class="mb-3 text-muted text-uppercase small">Size: M</p> -->
                   </div>
                   <!-- <div>
                     <div class="def-number-input number-input mb-0 w-100">
@@ -103,7 +103,7 @@
                     </a>
                   </div>
                   <p class="mb-0">
-                    <span><strong id="summary">$17.99</strong></span>
+                    <span><strong id="summary">${{doc.price}}</strong></span>
                   </p>
                 </div>
               </div>
@@ -204,23 +204,23 @@
       <!-- Card -->
       <div class="mb-3 card">
         <div class="pt-4">
-          <h5 class="mb-3">The total amount of</h5>
+          <h5 class="mb-3">Total Amount to be Paid</h5>
 
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-              Temporary amount
+              Books Amount
               <span>$25.98</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               Shipping
-              <span>Gratis</span>
+              <span>Free</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
               <div>
-                <strong>The total amount of</strong>
-                <strong>
+                <strong>Total Amount </strong>
+                <!-- <strong>
                   <p class="mb-0">(including VAT)</p>
-                </strong>
+                </strong> -->
               </div>
               <span><strong>$53.98</strong></span>
             </li>
