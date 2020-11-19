@@ -8,14 +8,17 @@
 
     <!-- this div displays only when user is not-logged-in -->
     <mat-card *ngIf="!(authService.user | async)" >
-        <mat-toolbar color="primary" style="margin-left:-18px ;margin-top:-15px; width:435px">
+        <mat-toolbar color="primary" style="margin-left:-18px ;margin-top:-15px; width:403px">
             <span style="margin-left:120px">LOGIN / SIGNUP</span>
           </mat-toolbar>
         <!-- these input fields takes email and password from user -->
         <!-- <input type="text" [(ngModel)]="email" placeholder="Enter email"/> -->
-        <mat-form-field appearance="standard" style="margin-top:10px">
-            <mat-label>Enter your email id</mat-label>
-            <input matInput placeholder=""  [(ngModel)]="email">
+        <span *ngIf="errmsg" style="margin-bottom: 0px;color:red;font-weight: 570;">
+            *INVALID EMAIL ID OR PASSWORD
+        </span>
+        <mat-form-field appearance="standard" >
+            <mat-label >Enter your email id</mat-label>
+            <input matInput placeholder="Enter your email id"  [(ngModel)]="email">
            
             <mat-hint>for eg. abc@gmail.com</mat-hint>
           </mat-form-field>
@@ -30,9 +33,9 @@
             <mat-hint>choose a strong password</mat-hint>
           </mat-form-field>
           <mat-card-actions>
-            <button mat-raised-button [disabled]="!email || !password" routerLink="/home" (click)="login()" color="primary">LOGIN</button>
+            <button mat-raised-button [disabled]="!email || !password"  (click)="login()" color="primary">LOGIN</button>
             
-            <button mat-raised-button [disabled]="!email || !password" routerLink="/home" (click)="signup()" color="primary">SIGNUP</button>
+            <button mat-raised-button [disabled]="!email || !password"  (click)="signup()" color="primary">SIGNUP</button>
          </mat-card-actions>
 
 
@@ -53,3 +56,5 @@
         Logout
     </button>
 </div>
+
+

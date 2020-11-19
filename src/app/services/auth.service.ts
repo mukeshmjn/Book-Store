@@ -14,26 +14,26 @@ export class AuthService {
   }
 
   signup(email: string, password: string) {
-    this.firebaseAuth
+   return this.firebaseAuth
       .createUserWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Success!', value);
-      })
-      .catch(err => {
-        console.log('Something went wrong:',err.message);
-      });
+      // .then(value => {
+      //   console.log('Success!', value);
+      // })
+      // .catch(err => {
+      //   console.log('Something went wrong:',err.message);
+      // });
   }
 
   login(email: string, password: string) {
-    this.firebaseAuth
+  return  this.firebaseAuth
       .signInWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Nice, it worked!');
-        console.log(value)
-      })
-      .catch(err => {
-        console.log('Something went wrong:',err.message);
-      });
+      // .then(value => {
+      //   console.log('Nice, it worked!');
+      //   console.log(value)
+      // })
+      // .catch(err => {
+      //   console.log('Something went wrong:',err.message);
+      // });
   }
 
   logout() {

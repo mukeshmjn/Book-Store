@@ -90,15 +90,23 @@ getBooks(){
         ...e.payload.doc.data() as Home
        } ;
     })
+    console.log(this.books.length)
     console.log(this.books)
   
 
 let  bookPrices: number[] = []
+
+if(this.books.length>0){
 for (let book of this.books ) {
 bookPrices.push(book.price)
 
  this.totalPrice = bookPrices.reduce((total, price) => total + price, 0)
+ this.totalPrice.toFixed(2)
+}
 
+}
+else{
+  this.totalPrice=0
 }
 console.log(bookPrices)
 console.log(this.totalPrice)
