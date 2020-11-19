@@ -3,7 +3,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from '../home/home.component'
 import { CartService } from '../services/cart.service';
 import {SendorderService} from '../services/sendorder.service';
-import { FormControl, FormGroup } from "@angular/forms";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { AngularFirestore, docChanges } from "@angular/fire/firestore";
 import { AngularFireStorage } from '@angular/fire/storage';
 
@@ -23,14 +23,14 @@ export class CheckoutComponent implements OnInit {
     private afStorage: AngularFireStorage, ) { }
   // declarations: [HomeComponent]
   form = new FormGroup({
-    fname: new FormControl(''),
-    lname: new FormControl(''),
-    sadd: new FormControl(''),
-    mark: new FormControl(''),
-    city: new FormControl(''),
+    fname: new FormControl('',[Validators.required,Validators.minLength(2)]),
+    lname: new FormControl('',[Validators.required,Validators.minLength(2)]),
+    sadd: new FormControl('',Validators.required),
+    mark: new FormControl('',Validators.required),
+    city: new FormControl('',Validators.required),
 
-    state: new FormControl(''),
-    zip: new FormControl('')
+    state: new FormControl('',Validators.required),
+    zip: new FormControl('',[Validators.required,Validators.minLength(6)])
     // lname: new FormControl(''),
     // lname: new FormControl(''),
 

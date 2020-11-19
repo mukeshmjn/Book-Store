@@ -11,3 +11,7 @@
 .form-group:hover{
     color:black;
 }
+input.ng-invalid.ng-touched {
+    border-bottom-color: red;
+    border-color: red;
+}

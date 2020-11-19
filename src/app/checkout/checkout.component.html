@@ -68,39 +68,105 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="firstname">First Name</label>
-          <input type="text" class="form-control"  formControlName="fname"  placeholder="First Name">
+          <input type="text" class="form-control"  formControlName="fname"  placeholder="First Name"
+          [ngClass]="{'has-error' : form.get('fname').errors &&
+          (form.get('fname').touched || form.get('fname').dirty)}">
+          <span class="help" *ngIf="form.get('fname').errors &&
+          (form.get('fname').touched || form.get('fname').dirty)">
+          <span  style="color: red" *ngIf="form.get('fname').errors.required">
+            *required field
+            </span>
+            <span style="color: red" *ngIf="form.get('fname').errors.minlength">
+              minimun 2 character
+              </span>
+          </span>
         </div>
         <div class="form-group col-md-6">
           <label for="lastname">Last Name</label>
-          <input type="text" class="form-control"  formControlName="lname" placeholder="Last Name">
+          <input type="text" class="form-control"  formControlName="lname" placeholder="Last Name"
+          [ngClass]="{'has-error' : form.get('lname').errors &&
+          (form.get('lname').touched || form.get('lname').dirty)}"
+          >
+          <span class="help" *ngIf="form.get('lname').errors &&
+          (form.get('lname').touched || form.get('lname').dirty)">
+          <span style="color: red" *ngIf="form.get('lname').errors.required">
+            *required field
+            </span>
+            <span style="color: red" *ngIf="form.get('lname').errors.minlength">
+              minimun 2 character
+              </span>
+          </span>
         </div>
       </div>
       <div class="form-group">
         <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" formControlName="sadd" id="inputAddress" placeholder="1234 Main St">
+        <input type="text" class="form-control" formControlName="sadd" id="inputAddress" placeholder="1234 Main St"
+        [ngClass]="{'has-error' : form.get('sadd').errors &&
+        (form.get('sadd').touched || form.get('sadd').dirty)}">
+        <span class="help" *ngIf="form.get('sadd').errors &&
+          (form.get('sadd').touched || form.get('sadd').dirty)">
+          <span style="color: red" *ngIf="form.get('sadd').errors.required">
+            *required field
+            </span>
+          </span>
       </div>
       <div class="form-group">
         <label for="inputAddress2">Landmark</label>
-        <input type="text" class="form-control"  formControlName="mark"  placeholder="Landmark">
+        <input type="text" class="form-control"  formControlName="mark"  placeholder="Landmark"
+        [ngClass]="{'has-error' : form.get('mark').errors &&
+        (form.get('mark').touched || form.get('mark').dirty)}">
+        <span class="help" *ngIf="form.get('mark').errors &&
+          (form.get('mark').touched || form.get('mark').dirty)">
+          <span style="color: red" *ngIf="form.get('mark').errors.required">
+            *required field
+            </span>
+          </span>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputCity">City</label>
-          <input type="text" class="form-control"  formControlName="city" id="inputCity">
+          <input type="text" class="form-control"  formControlName="city" id="inputCity"
+          [ngClass]="{'has-error' : form.get('city').errors &&
+          (form.get('city').touched || form.get('city').dirty)}">
+          <span class="help" *ngIf="form.get('city').errors &&
+          (form.get('city').touched || form.get('city').dirty)">
+          <span style="color: red" *ngIf="form.get('city').errors.required">
+            *required field
+            </span>
+          </span>
         </div>
    
           <div class="form-group col-md-4">
             <label for="inputstate">State</label>
-            <input type="text" class="form-control"  formControlName="state" id="inputstate">
+            <input type="text" class="form-control"  formControlName="state" id="inputstate"
+            [ngClass]="{'has-error' : form.get('state').errors &&
+            (form.get('state').touched || form.get('state').dirty)}">
+            <span class="help" *ngIf="form.get('state').errors &&
+          (form.get('state').touched || form.get('state').dirty)">
+          <span style="color: red" *ngIf="form.get('state').errors.required">
+            *required field
+            </span>
+          </span>
           </div>
        
         <div class="form-group col-md-2">
           <label for="inputZip">Zip Code</label>
-          <input type="text" class="form-control"  formControlName="zip" id="inputZip">
+          <input type="text" class="form-control"  formControlName="zip" id="inputZip"
+          [ngClass]="{'has-error' : form.get('zip').errors &&
+          (form.get('zip').touched || form.get('zip').dirty)}" maxlength="6">
+          <span class="help" *ngIf="form.get('zip').errors &&
+          (form.get('zip').touched || form.get('zip').dirty)">
+          <span style="color: red" *ngIf="form.get('zip').errors.required">
+            *required field
+            </span>
+            <span style="color: red" *ngIf="form.get('zip').errors.minlength">
+              minimun 6 character
+              </span>
+          </span>
         </div>
       </div>
 
-      <button type="submit"  (click)="onSubmit()"  routerLink="/orderconfirmed"  class="btn btn-primary">Place Order</button>
+      <button type="submit"  (click)="onSubmit()" [disabled]="form.invalid" routerLink="/orderconfirmed"  class="btn btn-primary">Place Order</button>
     </form>
   </div>
 </div>
