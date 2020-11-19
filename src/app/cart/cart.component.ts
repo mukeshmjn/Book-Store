@@ -25,6 +25,7 @@ export class CartComponent implements OnInit {
     value: any;
     abc:any;
     books: Home[];
+    totalPrice:any
   
   ngOnInit() {
     // this.cart.getMsg().subscribe(myArray => {
@@ -89,8 +90,22 @@ getBooks(){
         ...e.payload.doc.data() as Home
        } ;
     })
+    console.log(this.books)
+  
+
+let  bookPrices: number[] = []
+for (let book of this.books ) {
+bookPrices.push(book.price)
+
+ this.totalPrice = bookPrices.reduce((total, price) => total + price, 0)
+
+}
+console.log(bookPrices)
+console.log(this.totalPrice)
+
   });
   console.log('abcd')
+  
     }
 
 }
