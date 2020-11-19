@@ -1,3 +1,5 @@
+
+
 <section class="contact py-5 bg-light" id="contact">
     <div class="container">
       <div class="row">
@@ -30,12 +32,12 @@
           </div> -->
           <div class="Support">
             <h5>SUPPORT</h5>
-            <span class="email-icon"></span>
+            <span class="     lname-icon"></span>
             <p>mukeshmahajanonhisway@gmail.com</p>
           </div>
           <!-- <div class="Sales">
             <h5>SALES</h5>
-            <span class="email-icon"></span>
+            <span class="     lname-icon"></span>
             <p>support@edflylearn.com</p>
           </div> -->
         </div>
@@ -53,31 +55,62 @@
                       name="First Name"
                       class="form-control"
                       type="text"
-                      formControlName="fname"
+                     formControlName="fname" 
+                      [ngClass]="{'has-error' : contactform.get('fname').errors &&
+                      (contactform.get('fname').touched || contactform.get('fname').dirty)}"
                     />
+                    <span class="block" *ngIf="contactform.get('fname').errors &&
+                    (contactform.get('fname').touched || contactform.get('fname').dirty)">
+                    <span style="color:red" *ngIf="contactform.get('fname').errors.required"> 
+                      *required field
+                      </span>
+                      <span style="color:red" *ngIf="contactform.get('fname').errors.minlength"> 
+                        *minimun 2 character
+                        </span>
+                      </span>
                   </div>
                   <div class="form-group col-md-6">
                     Last Name*
                     <input
-                      type="text"
+                      type="text" 
                       class="form-control"
                       name="Last Name"
                       id="last-Name"
-                      formControlName="lname"
+                     formControlName="lname"
+                      [ngClass]="{'has-error' : contactform.get('lname').errors &&
+                       (contactform.get('lname').touched || contactform.get('lname').errors.dirty)}"
                     />
+                    <span *ngIf="contactform.get('lname').errors &&
+                    (contactform.get('lname').touched || contactform.get('lname').errors.dirty)">
+                    <span style="color: red" *ngIf="contactform.get('lname').errors.required">
+                      *required field</span>
+                      <span style="color:red" *ngIf="contactform.get('lname').errors.minlength"> 
+                        *minimun 2 character
+                        </span>
+                    </span>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    Email Address
+                    email
                     <input
-                      id="Email-id"
-                      name="Email"
+                      id="email-id"
+                      name="email"
                       class="form-control"
                       required="required"
-                      type="email"
-                      formControlName="email"
+                      type=" email"
+                     formControlName="email"
+                      [ngClass]="{'has-error' : contactform.get('email').errors &&
+                       (contactform.get('email').touched || contactform.get('email').errors.dirty)}"
                     />
+                    <span *ngIf="contactform.get('email').errors &&
+                    (contactform.get('email').touched || contactform.get('email').errors.dirty)">
+                    <span style="color: red" *ngIf="contactform.get('email').errors.required">
+                      *required field</span>
+                      <span style="color: red" *ngIf="contactform.get('email').errors.pattern">
+                        Provide a valid email</span>
+                    </span>
+                    
                   </div>
                   <div class="form-group col-md-6">
                     Phone Number
@@ -86,18 +119,36 @@
                       name="Phone Number"
                       class="form-control"
                       type="number"
-                      formControlName="pno"
+                     formControlName="pno"
+                      [ngClass]="{'has-error' : contactform.get('pno').errors &&
+                       (contactform.get('pno').touched || contactform.get('pno').errors.dirty)}"
                     />
+                 <span *ngIf="contactform.get('pno').errors &&
+                    (contactform.get('pno').touched || contactform.get('pno').errors.dirty)">
+                    <span style="color: red" *ngIf="contactform.get('pno').errors.required">
+                      *required field</span>
+                    
+                    <span style="color: red" *ngIf="contactform.get('pno').errors.pattern">
+                      It should be 10ch long</span>
+                    </span>
+
                   </div>
                   <div class="form-group col-md-12">
-                    Subject
+                    subject
                     <input
-                      id="subject"
-                      name="subject"
+                      id=" subject"
+                      name=" subject"
                       class="form-control"
                       type="text"
-                      formControlName="subject"
+                     formControlName="subject"
+                     [ngClass]="{'has-error' : contactform.get('subject').errors &&
+                       (contactform.get('subject').touched || contactform.get('subject').errors.dirty)}"
                     />
+                    <span *ngIf="contactform.get('subject').errors &&
+                    (contactform.get('subject').touched || contactform.get('subject').errors.dirty)">
+                    <span style="color: red" *ngIf="contactform.get('subject').errors.required">
+                      *required field</span>
+                    </span>
                   </div>
                   <div class="form-group col-md-12">
                     How can we help?
@@ -107,20 +158,23 @@
                       cols="40"
                       rows="5"
                       class="form-control"
-                      formControlName="comment"
+                     formControlName="comment"
+                     [ngClass]="{'has-error' : contactform.get('comment').errors &&
+                     (contactform.get('comment').touched || contactform.get('comment').errors.dirty)}"
                     ></textarea>
+                    <span *ngIf="contactform.get('comment').errors &&
+                    (contactform.get('comment').touched || contactform.get('comment').errors.dirty)">
+                    <span style="color: red" *ngIf="contactform.get('comment').errors.required">
+                      *required field</span>
+                    </span>
                   </div>
                 </div>
                 <!-- button -->
                 <div class="form-row">
-                  <button (click)="onSubmit()"
+                  <button (click)="onSubmit()" [disabled]="contactform.invalid"
                     type="button"
-                    class="messageBtn"
-                    style="
-                      background-color: #422fd3;
-                      color: #eceafb;
-                      border-color: #422fd3;
-                    "
+                    class="btn btn-lg btn-primary msg"
+                 
                   >
                     Send Message!
                   </button>
@@ -133,4 +187,5 @@
       </div>
     </div>
   </section>
+ 
   

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from "@angular/forms";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com'
 @Component({
   selector: 'app-contact',
@@ -8,15 +8,15 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com'
 })
 export class ContactComponent implements OnInit {
 abc:any;
-  constructor() { }
-  contactform = new FormGroup({
-    fname: new FormControl(''),
-    lname: new FormControl(''),
-    email: new FormControl(''),
-    pno: new FormControl(''),
-    subject: new FormControl(''),
 
-    comment: new FormControl(''),
+  constructor() { }
+contactform = new FormGroup({
+    fname: new FormControl('',[Validators.required, Validators.minLength(2)]),
+    lname: new FormControl('',[Validators.required, Validators.minLength(2)]),
+    email: new FormControl('',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
+    pno: new FormControl('',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
+    subject: new FormControl('',Validators.required),
+    comment: new FormControl('',Validators.required),
     // zip: new FormControl('')
     // lname: new FormControl(''),
     // lname: new FormControl(''),

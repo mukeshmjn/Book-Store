@@ -11,10 +11,12 @@
   margin-bottom: 30px;
 }
 
-.messageBtn {
-  background-color: #422fd3;
-  color: #eceafb;
-  border-color: #422fd3;
+.msg {
+ height:40px;
+ padding:5px;
+ font-weight: 700;
+ width:150px;
+ font-size: 15px;
 }
 
 .help-info {
@@ -79,4 +81,25 @@
   color: #5c6770;
 }
 
+input.ng-invalid.ng-touched {
+  border-bottom-color: red;
+  border-color: red;
+  
 
+}
+// input.ng-valid {
+//   border-bottom-color: green;
+//   border-color: green;
+
+// }
+
+// .block{
+//   color: red;
+// }
+
+textarea.ng-invalid.ng-touched {
+  border-bottom-color: red;
+  border-color: red;
+  
+
+}
