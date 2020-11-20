@@ -19,7 +19,6 @@
         <mat-form-field appearance="standard" >
             <mat-label >Enter your email id</mat-label>
             <input matInput placeholder="Enter your email id"  [(ngModel)]="email">
-           
             <mat-hint>for eg. abc@gmail.com</mat-hint>
           </mat-form-field>
           <br>
@@ -28,11 +27,7 @@
 
         <mat-form-field appearance="standard">
             <mat-label>Enter your password</mat-label>
-            <input matInput type="password" placeholder="enter password"  [(ngModel)]="password" required password minlength="6">
-           <span *ngIf="password.touched">
-               <span style="color: red" *ngIf="password.errors?.required">password required</span>
-               <span style="color: red" *ngIf="password.errors?.minlength">minimum 6 charachter</span>
-               </span>
+            <input matInput type="password" placeholder="enter password"  [(ngModel)]="password">
             <mat-hint>choose a strong password</mat-hint>
           </mat-form-field>
           <mat-card-actions>
