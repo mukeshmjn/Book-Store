@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,9 +15,12 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
   errmsg:boolean= false;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
   constructor(public authService: AuthService,
-  public router:Router ) { }
+  public router:Router,
+  private _snackBar: MatSnackBar ) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +31,14 @@ export class LoginComponent implements OnInit {
       console.log('Success!', value);
       this.errmsg=false
       this.router.navigate(['home'])
+      console.log('snackbar hai g')
+      debugger
+      this._snackBar.open('Sign Up Successful', 'Welcome', {
+        duration: 500,
+       
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+      });
     })
     .catch(err => {
       console.log('Something went wrong:',err.message);
@@ -39,6 +55,14 @@ export class LoginComponent implements OnInit {
          console.log(value)
          this.errmsg=false
          this.router.navigate(['home'])
+         console.log('snackbar hai g')
+         debugger
+         this._snackBar.open('Login Successful', 'Welcome', {
+           duration: 500,
+          
+           horizontalPosition: this.horizontalPosition,
+           verticalPosition: this.verticalPosition,
+         });
        })
        .catch(err => {
          console.log('Something went wrong:',err.message);
