@@ -10,7 +10,7 @@
     <a mat-button  routerLink="/aboutus"><span class=" botu"> ABOUT</span> </a>
     <a mat-button  routerLink="/contactus"><span class=" botu" >CONTACT</span> </a>
     <span class="y">
-    <a mat-button *ngIf="!(authService.user | async)"  routerLink="/login"> Login/Register </a>
+    <a mat-button class="lr" *ngIf="!(authService.user | async)"  routerLink="/login"> Login/Register </a>
     <a mat-button *ngIf="authService.user | async" (click)="logout()" (click)="openSnackBar()"    > Logout </a>
     <a mat-button  *ngIf="authService.user | async" routerLink="/cart" > Cart </a>
     <a mat-button  *ngIf="authService.user | async" routerLink="/orders" > Orders </a>
