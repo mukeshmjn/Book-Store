@@ -10,7 +10,7 @@
     box-shadow: 10px 10px 10px #000;
 }
 .row{
-    background-color: rgb(234, 251, 253);
+    border: solid#000;
     margin-left: 100px;
     width: 900px;
     padding-top: 20px;
@@ -19,4 +19,10 @@
 }
 .product-description{
     margin-top: 50px;
+}
+p{
+    font-family: sans;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    word-spacing: 5px;
 }
