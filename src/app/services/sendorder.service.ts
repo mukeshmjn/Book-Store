@@ -7,7 +7,7 @@ import {BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SendorderService {
-   public behaviourObj = new BehaviorSubject({type:'',value:''});
+   public behaviourObj = new BehaviorSubject({type:'',value:'',total: ''});
     message = this.behaviourObj.asObservable()
   constructor() { }
 

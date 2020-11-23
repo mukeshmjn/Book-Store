@@ -14,7 +14,8 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 export class CheckoutComponent implements OnInit {
   orders: any;
-  ordersplaced:any
+  ordersplaced:any;
+  orderstotal:any;
   
   constructor(
     private cart: CartService,
@@ -40,7 +41,10 @@ export class CheckoutComponent implements OnInit {
     debugger
     console.log(mesg);
     this.orders = mesg.value;
+    this.orderstotal = mesg.total
     console.log(this.orders)
+    console.log(this.orderstotal)
+    
   })
 
  
