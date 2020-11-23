@@ -2,26 +2,36 @@
 
     <div class="card card-1"  >
       <div class="card-body">
-   
-        <div class="sq align-self-center  "> <img class=" rounded float-left img-fluid my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="{{order.image}}" width="135" height="135" /> </div>
+  <div class="row">
+        <div class="sq align-self-center" > <img class=" rounded float-left img-fluid my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="{{order.image}}" width="135" height="135" /> </div>
+        
+          <div class="hh">
         <div class="col my-auto text-center">
-            <h4 class="mb-0 ts" >&#8377;{{order.price}}</h4>
+            <h4 class="mb-0 ts" >Price:  &#8377;{{order.price}}</h4>
         </div>
+        <br><br>
         <div class="col my-auto text-center">
           <h4 class="mb-0 ts" >Pages: {{order.pages}}</h4>
       </div>
-        <h4 class="card-title text-dark ts">Delivery Address</h4>
+      </div>
+      <div class="hh">
+      <div>
+        <h4 class="card-title text-dark ts text-center">Delivery Address</h4>
         <br />
-        <h5 class="card-title text-dark ts">{{order.firstName}} {{order.lastName}}</h5>
-        <p class="card-text ts">
+        <h5 class="card-title text-dark ts text-center">{{order.firstName}} {{order.lastName}}</h5>
+        <p class="card-text ts text-center">
          {{order.streetAddress}}
         </p>
-        <p class="card-text ts">
+        <br><br>
+        <p class="card-text ts text-center">
           Landmark: {{order.mark}}
          </p>
-        <p class="card-text ts">
+        <p class="card-text ts text-center">
           {{order.state}}
          </p>
+        </div>
+        </div>
+        </div>
         <br />
         <!-- <div>
           <span class="phone text-dark ts">Phone Number &nbsp; &nbsp;</span>
