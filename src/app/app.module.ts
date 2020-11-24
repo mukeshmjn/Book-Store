@@ -43,6 +43,7 @@ import { LoginComponent } from './login/login.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     OrdersComponent,
     OrderdetailsComponent,
     ProductdetailsComponent,
+    RegisterComponent,
    
   ],
   imports: [
@@ -75,7 +77,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'bookstoree')
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'bookstore')
 
   ],
   providers: [ AuthService ],
