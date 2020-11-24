@@ -12,6 +12,7 @@ $background-pale: #D1C4E9;
    
     @include zero-margin(20px, 0px);
     width:100%;
+    height:300px;
     background-color: #2b0f42;
     color: white;
     margin-top: 10px;
@@ -26,7 +27,7 @@ $background-pale: #D1C4E9;
 .btn-mail{color:#fff!important;background-color:#512DA8!important;}
 
 .def{
-    font-size:25px;
+    font-size:20px;
     font-family: Sofia;
 }
 // #cp{
@@ -35,6 +36,7 @@ $background-pale: #D1C4E9;
 
 .lst{
     color:white;
+    font-size: 15px;
 }
 .ad{
     margin-left: 250px;
