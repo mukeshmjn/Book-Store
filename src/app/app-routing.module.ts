@@ -11,6 +11,7 @@ import { ConfirmedComponent } from './confirmed/confirmed.component';
 import { LoginComponent } from './login/login.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,14 +19,15 @@ export const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path : 'aboutus', component: AboutComponent},
   { path : 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent },
   { path: 'orderconfirmed', component: ConfirmedComponent},
   {path: 'productdetails', component: ProductdetailsComponent},
   { path: 'orderdetails', component: OrderdetailsComponent},
   { path: 'contactus', component: ContactComponent},
   { path: 'orders', component: OrdersComponent},
   { path: '', redirectTo: '/home',pathMatch: 'full'},
-  
- 
+
+
 ];
 
 
