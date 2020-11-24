@@ -127,13 +127,13 @@
 <!-- 
   </div>  -->
 
-<div class="row container-fluid">
+<div class="row container-fluid uui">
 <div class="col-lg-3 col-md-4 icon-box p-5" data-aos="fade-up"  *ngFor="let doc of books">
   <div class="card" style="width: 14rem; height: 30rem; border-radius: 20px; font-size: 0.7rem; ">
     <img class="card-img-top" style="height: 300px; border-radius: 20px;" src="{{doc.image}}" routerLink="/productdetails" (click)= "productDetails(doc)"
       alt="Card image cap">
     <div class="card-body">
-      <div>
+      <div class="uui">
         <h1 class="card-title op" (click)="productDetails(doc)" routerLink="/productdetails">{{doc.bookname}}</h1>
         <h1 class="card-title op" (click)="productDetails(doc)" routerLink="/productdetails">by {{doc.author}}</h1>
         <div class="">

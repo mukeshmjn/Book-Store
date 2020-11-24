@@ -50,7 +50,7 @@ export class CartComponent implements OnInit {
   }
   sendOrderData()
   {
-    this.sendorder.sendDetails({type:'SEND-ORDER_DETAILS',value:this.books})
+    this.sendorder.sendDetails({type:'SEND-ORDER_DETAILS',value:this.books,total:this.totalPrice})
   }
   delete(value) {
     debugger

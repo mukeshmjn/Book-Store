@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
   errmsg:boolean= false;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+  show_password: Boolean = false;
+  visible:Boolean=true;
 
   constructor(public authService: AuthService,
   public router:Router,
@@ -74,5 +76,12 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.authService.logout();
+  }
+
+  showPassword() {
+    console.log(this.show_password)
+    
+    this.show_password = !this.show_password;
+    this.visible= !this.visible;
   }
 }
