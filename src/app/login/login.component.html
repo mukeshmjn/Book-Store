@@ -1,6 +1,6 @@
 <div >
 
-    <!-- this header tag displays only when user is logged-in -->
+    <!-- this header tag displays oflk;nly when user is logged-in -->
     <h1 *ngIf="authService.user | async">
         Welcome User: {{ (authService.user | async)?.email }}!
     </h1>
@@ -8,8 +8,8 @@
 
     <!-- this div displays only when user is not-logged-in -->
     <mat-card *ngIf="!(authService.user | async)" >
-        <mat-toolbar color="primary" style="margin-left:-18px ;margin-top:-15px; width:403px">
-            <span style="margin-left:120px">LOGIN / SIGNUP</span>
+        <mat-toolbar color="primary" >
+            <span >LOGIN / SIGNUP</span>
           </mat-toolbar>
         <!-- these input fields takes email and password from user -->
         <!-- <input type="text" [(ngModel)]="email" placeholder="Enter email"/> -->

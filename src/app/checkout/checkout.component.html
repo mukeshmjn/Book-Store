@@ -6,7 +6,7 @@
     <mat-label>First Name</mat-label>
     <input matInput placeholder="Placeholder"
     formControlName="fname">
-  
+
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
 
@@ -22,7 +22,7 @@
     <mat-label>Street Address </mat-label>
     <input matInput placeholder="Placeholder"
     formControlName="sadd">
- 
+
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
 
@@ -31,7 +31,7 @@
     <mat-label>City</mat-label>
     <input matInput placeholder="Placeholder"
     formControlName="city">
-  
+
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
 
@@ -40,7 +40,7 @@
     <mat-label>Country</mat-label>
     <input matInput placeholder="Placeholder"
     formControlName="country">
-   
+
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
 
@@ -49,183 +49,181 @@
     <mat-label>State</mat-label>
     <input matInput placeholder="Placeholder"
     formControlName="state">
-    
+
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
 
 </form>
- 
+
 
 </div>
 <button class="byt" style="width:100%"  (click)="onSubmit()" mat-flat-button color="primary" routerLink="/orderconfirmed" >Buy</button>
 </mat-card> -->
 <section>
-<div class="row ">
+  <div class="row ">
 
-<div style="margin-left: 140px;">
-  <h2 style="font-family: fantasy;text-align:center">
-    Enter Your Shipping Details
-  </h2>
-<div class="card  ap">
-  <div class="card-body">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="firstname">First Name</label>
-          <input type="text" class="form-control"  formControlName="fname"  placeholder="First Name"
-          [ngClass]="{'has-error' : form.get('fname').errors &&
+
+    <div style="margin-left: 50px;">
+      <h2 class="text-center" style="font-family: fantasy;">
+        Enter Your Shipping Details
+      </h2>
+      <div class="card col-12 col-sm ap">
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="form-group col-md-6 ">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" formControlName="fname" placeholder="First Name" [ngClass]="{'has-error' : form.get('fname').errors &&
           (form.get('fname').touched || form.get('fname').dirty)}">
-          <span class="help" *ngIf="form.get('fname').errors &&
+                <span class="help" *ngIf="form.get('fname').errors &&
           (form.get('fname').touched || form.get('fname').dirty)">
-          <span  style="color: red" *ngIf="form.get('fname').errors.required">
-            *required field
-            </span>
-            <span style="color: red" *ngIf="form.get('fname').errors.minlength">
-              minimun 2 character
-              </span>
-          </span>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="lastname">Last Name</label>
-          <input type="text" class="form-control"  formControlName="lname" placeholder="Last Name"
-          [ngClass]="{'has-error' : form.get('lname').errors &&
-          (form.get('lname').touched || form.get('lname').dirty)}"
-          >
-          <span class="help" *ngIf="form.get('lname').errors &&
+                  <span style="color: red" *ngIf="form.get('fname').errors.required">
+                    *required field
+                  </span>
+                  <span style="color: red" *ngIf="form.get('fname').errors.minlength">
+                    minimun 2 character
+                  </span>
+                </span>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" formControlName="lname" placeholder="Last Name" [ngClass]="{'has-error' : form.get('lname').errors &&
+          (form.get('lname').touched || form.get('lname').dirty)}">
+                <span class="help" *ngIf="form.get('lname').errors &&
           (form.get('lname').touched || form.get('lname').dirty)">
-          <span style="color: red" *ngIf="form.get('lname').errors.required">
-            *required field
-            </span>
-            <span style="color: red" *ngIf="form.get('lname').errors.minlength">
-              minimun 2 character
-              </span>
-          </span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" formControlName="sadd" id="inputAddress" placeholder="1234 Main St"
-        [ngClass]="{'has-error' : form.get('sadd').errors &&
+                  <span style="color: red" *ngIf="form.get('lname').errors.required">
+                    *required field
+                  </span>
+                  <span style="color: red" *ngIf="form.get('lname').errors.minlength">
+                    minimun 2 character
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" formControlName="sadd" id="inputAddress"
+                  placeholder="1234 Main St" [ngClass]="{'has-error' : form.get('sadd').errors &&
         (form.get('sadd').touched || form.get('sadd').dirty)}">
-        <span class="help" *ngIf="form.get('sadd').errors &&
+                <span class="help" *ngIf="form.get('sadd').errors &&
           (form.get('sadd').touched || form.get('sadd').dirty)">
-          <span style="color: red" *ngIf="form.get('sadd').errors.required">
-            *required field
-            </span>
-          </span>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress2">Landmark</label>
-        <input type="text" class="form-control"  formControlName="mark"  placeholder="Landmark"
-        [ngClass]="{'has-error' : form.get('mark').errors &&
+                  <span style="color: red" *ngIf="form.get('sadd').errors.required">
+                    *required field
+                  </span>
+                </span>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputAddress2">Landmark</label>
+                <input type="text" class="form-control" formControlName="mark" placeholder="Landmark" [ngClass]="{'has-error' : form.get('mark').errors &&
         (form.get('mark').touched || form.get('mark').dirty)}">
-        <span class="help" *ngIf="form.get('mark').errors &&
+                <span class="help" *ngIf="form.get('mark').errors &&
           (form.get('mark').touched || form.get('mark').dirty)">
-          <span style="color: red" *ngIf="form.get('mark').errors.required">
-            *required field
-            </span>
-          </span>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control"  formControlName="city" id="inputCity"
-          [ngClass]="{'has-error' : form.get('city').errors &&
+                  <span style="color: red" *ngIf="form.get('mark').errors.required">
+                    *required field
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" formControlName="city" id="inputCity" [ngClass]="{'has-error' : form.get('city').errors &&
           (form.get('city').touched || form.get('city').dirty)}">
-          <span class="help" *ngIf="form.get('city').errors &&
+                <span class="help" *ngIf="form.get('city').errors &&
           (form.get('city').touched || form.get('city').dirty)">
-          <span style="color: red" *ngIf="form.get('city').errors.required">
-            *required field
-            </span>
-          </span>
-        </div>
-   
-          <div class="form-group col-md-4">
-            <label for="inputstate">State</label>
-            <input type="text" class="form-control"  formControlName="state" id="inputstate"
-            [ngClass]="{'has-error' : form.get('state').errors &&
+                  <span style="color: red" *ngIf="form.get('city').errors.required">
+                    *required field
+                  </span>
+                </span>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="inputstate">State</label>
+                <input type="text" class="form-control" formControlName="state" id="inputstate" [ngClass]="{'has-error' : form.get('state').errors &&
             (form.get('state').touched || form.get('state').dirty)}">
-            <span class="help" *ngIf="form.get('state').errors &&
+                <span class="help" *ngIf="form.get('state').errors &&
           (form.get('state').touched || form.get('state').dirty)">
-          <span style="color: red" *ngIf="form.get('state').errors.required">
-            *required field
-            </span>
-          </span>
-          </div>
-       
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip Code</label>
-          <input type="text" class="form-control"  formControlName="zip" id="inputZip"
-          [ngClass]="{'has-error' : form.get('zip').errors &&
+                  <span style="color: red" *ngIf="form.get('state').errors.required">
+                    *required field
+                  </span>
+                </span>
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip Code</label>
+                <input type="text" class="form-control" formControlName="zip" id="inputZip" [ngClass]="{'has-error' : form.get('zip').errors &&
           (form.get('zip').touched || form.get('zip').dirty)}" maxlength="6">
-          <span class="help" *ngIf="form.get('zip').errors &&
+                <span class="help" *ngIf="form.get('zip').errors &&
           (form.get('zip').touched || form.get('zip').dirty)">
-          <span style="color: red" *ngIf="form.get('zip').errors.required">
-            *required field
-            </span>
-            <span style="color: red" *ngIf="form.get('zip').errors.minlength">
-              minimun 6 character
-              </span>
-          </span>
+                  <span style="color: red" *ngIf="form.get('zip').errors.required">
+                    *required field
+                  </span>
+                  <span style="color: red" *ngIf="form.get('zip').errors.minlength">
+                    minimun 6 character
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <button type="submit" (click)="onSubmit()" [disabled]="form.invalid" routerLink="/orderconfirmed"
+              class="btn btn-primary">Place Order</button>
+          </form>
         </div>
       </div>
+    </div>
 
-      <button type="submit"  (click)="onSubmit()" [disabled]="form.invalid" routerLink="/orderconfirmed"  class="btn btn-primary">Place Order</button>
-    </form>
-  </div>
-</div>
-</div>
+    <div class="col-lg-4 float-right" style="margin-top: 50px;">
+      <!-- Card -->
+      <div class="mb-3 card p-3">
+        <div class="pt-4">
+          <h5 class="mb-3">Total Amount to be Paid</h5>
 
-<div class="col-lg-4 float-right" style="margin-top: 50px;">
-  <!-- Card -->
-  <div class="mb-3 card p-3">
-    <div class="pt-4">
-      <h5 class="mb-3">Total Amount to be Paid</h5>
-
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-          Books Amount
-          <span>{{orderstotal}}</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-          Shipping
-          <span>Free</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-          <div>
-            <strong>Total Amount </strong>
-            <!-- <strong>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+              Books Amount
+              <span>{{orderstotal}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              Shipping
+              <span>Free</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+              <div>
+                <strong>Total Amount </strong>
+                <!-- <strong>
                   <p class="mb-0">(including VAT)</p>
                 </strong> -->
-          </div>
-          <span><strong>{{orderstotal}}</strong></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- Card -->
+              </div>
+              <span><strong>{{orderstotal}}</strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Card -->
 
-  <!-- Card -->
-  <div class="mb-3 card p-3">
-    <div class="pt-4">
-      <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
-        aria-expanded="false" aria-controls="collapseExample">
-        Add a discount code (optional)
-        <span><i class="fas fa-chevron-down pt-1"></i></span>
-      </a>
+      <!-- Card -->
+      <div class="mb-3 card p-3">
+        <div class="pt-4">
+          <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Add a discount code (optional)
+            <span><i class="fas fa-chevron-down pt-1"></i></span>
+          </a>
 
-      <div class="collapse" id="collapseExample">
-        <div class="mt-3">
-          <div class="md-form md-outline mb-0">
-            <input type="text" id="discount-code" class="form-control font-weight-light"
-              placeholder="Enter discount code" />
+          <div class="collapse" id="collapseExample">
+            <div class="mt-3">
+              <div class="md-form md-outline mb-0">
+                <input type="text" id="discount-code" class="form-control font-weight-light"
+                  placeholder="Enter discount code" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Card -->
     </div>
-  </div>
-  
-  <!-- Card -->
-</div>
-</div>
+    </div>
+
 </section>
