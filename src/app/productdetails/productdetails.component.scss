@@ -26,3 +26,45 @@ p{
     line-height: 1.6;
     word-spacing: 5px;
 }
+
+@media screen and (max-width:400px) {
+  // img {
+  //     width:100%;
+  // }
+  .container {
+      max-width:100%;
+      width: 100%;
+      float: left;
+  }
+  .dtim{
+      width:50%;
+      float:left;
+      margin:0;
+
+      height: 50%;
+  }
+  .row{
+    border: solid rgb(201, 76, 76);
+    margin-left: 15px;
+    width: 250px;
+    padding-top: 2px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgb(230, 162, 36);
+}
+.product-description{
+  margin-top: 25px;
+}
+.des{
+  // text-align:center;
+   padding:20px
+}
+.product-description{
+  margin-top: 25px;
+}
+p{
+  font-family: sans;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  word-spacing: 4px;
+}
+  }
