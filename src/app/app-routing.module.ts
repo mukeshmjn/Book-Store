@@ -26,12 +26,11 @@ export const routes: Routes = [
   { path: 'orderdetails', component: OrderdetailsComponent},
   { path: 'contactus', component: ContactComponent},
   { path: 'orders', component: OrdersComponent},
+  { path: '', redirectTo: '/home',pathMatch: 'full'},
   {
     path: "**",
     component: PagenotfoundComponent,
   },
-
-    { path: '', redirectTo: '/home',pathMatch: 'full'},
 
 ];
 
