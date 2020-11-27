@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
@@ -15,6 +15,7 @@ import {
 export class HeaderComponent implements OnInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+  // @Output() public sidenavToggle = new EventEmitter();
 
   constructor(public authService: AuthService,
    private router:Router,
@@ -27,6 +28,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/home');
    console.log("logout successful")
   }
+  // public onToggleSidenav = () => {
+  //   this.sidenavToggle.emit();
+  // }
 
   openSnackBar() {
     debugger
@@ -34,7 +38,7 @@ export class HeaderComponent implements OnInit {
     debugger
     this._snackBar.open('logout successful', 'Thanks', {
       duration: 500,
-     
+
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });

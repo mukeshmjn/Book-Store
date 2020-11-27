@@ -1,23 +1,21 @@
-
-
-
-
 <mat-toolbar style="background-color: #2b0f42;width: 100%;"class="abc">
-
-    <div class="m">BookStore</div>
-   <div class="def">
-    <a mat-button routerLink="/home" ><span  class=" botu">Home</span> </a>
-    <a mat-button  routerLink="/aboutus"><span class=" botu"> ABOUT</span> </a>
-    <a mat-button  routerLink="/contactus"><span class=" botu" >CONTACT</span> </a>
-    <span class="y">
-    <a mat-button class="lr" *ngIf="!(authService.user | async)"  routerLink="/login"> Login </a>
-    <a mat-button class="" *ngIf="!(authService.user | async)"  routerLink="/register"> Register </a>
-    <a mat-button *ngIf="authService.user | async" (click)="logout()" (click)="openSnackBar()"    > Logout </a>
-    <a mat-button  *ngIf="authService.user | async" routerLink="/cart" > Cart </a>
-    <a mat-button  *ngIf="authService.user | async" routerLink="/orders" > Orders </a>
-    </span>
+  <!-- <div fxHide.gt-xs>
+    <button mat-icon-button >
+        <mat-icon>menu</mat-icon>
+    </button>
+</div> -->
+  <div class="m">BookStore</div>
+ <div class="def">
+  <a mat-button routerLink="/home" ><span  class=" botu">Home</span> </a>
+  <a mat-button  routerLink="/aboutus"><span class=" botu"> ABOUT</span> </a>
+  <a mat-button  routerLink="/contactus"><span class=" botu" >CONTACT</span> </a>
+  <span class="y">
+  <a mat-button class="lr" *ngIf="!(authService.user | async)"  routerLink="/login"> Login </a>
+  <a mat-button class="" *ngIf="!(authService.user | async)"  routerLink="/register"> Register </a>
+  <a mat-button *ngIf="authService.user | async" (click)="logout()" (click)="openSnackBar()"    > Logout </a>
+  <a mat-button  *ngIf="authService.user | async" routerLink="/cart" > Cart </a>
+  <a mat-button  *ngIf="authService.user | async" routerLink="/orders" > Orders </a>
+  </span>
 
 </div>
- </mat-toolbar>
-
-
+</mat-toolbar>
