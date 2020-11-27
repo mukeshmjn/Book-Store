@@ -1,5 +1,5 @@
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide img-fluid max-width: 100%; height:auto;" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="/assets/book.jpg" alt="First slide">
@@ -34,11 +34,11 @@
      fxLayout.xs="column"
      fxLayoutAlign.gt-md="space-around center"
      fxLayoutGap="10px" >
-    
+
 <mat-card *ngFor='let doc of books' fxflex="30%"  class="bookscard">
   <img  mat-card-image src="{{doc.image}}" alt="it book" class="itb">
   <mat-card-title class="tit">
-   <p  #book1="ngModel" [(ngModel)]="doc.book1">{{doc.book1}} </p> 
+   <p  #book1="ngModel" [(ngModel)]="doc.book1">{{doc.book1}} </p>
    <br>
    <p >${{doc.price}}</p>
   <mat-card-actions>
@@ -51,7 +51,7 @@
 <mat-card fxflex="30%"  class="bookscard">
   <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
   <mat-card-title class="tit">
-   <p >IT | Stephen King </p> 
+   <p >IT | Stephen King </p>
    <br>
    <p>$50</p>
   <mat-card-actions>
@@ -63,7 +63,7 @@
 <mat-card fxflex="30%"  class="bookscard">
   <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
   <mat-card-title class="tit">
-   <p>IT | Stephen King </p> 
+   <p>IT | Stephen King </p>
    <br>
    <p>$50</p>
   <mat-card-actions>
@@ -75,7 +75,7 @@
 <mat-card fxflex="30%"  class="bookscard">
   <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
   <mat-card-title class="tit">
-   <p>IT | Stephen King </p> 
+   <p>IT | Stephen King </p>
    <br>
    <p>$50</p>
   <mat-card-actions>
@@ -87,7 +87,7 @@
 <mat-card fxflex="30%"  class="bookscard">
   <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
   <mat-card-title class="tit">
-   <p>IT | Stephen King </p> 
+   <p>IT | Stephen King </p>
    <br>
    <p>$50</p>
   <mat-card-actions>
@@ -100,7 +100,7 @@
 <mat-card fxflex="30%"  class="bookscard">
   <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
   <mat-card-title class="tit">
-   <p>IT | Stephen King </p> 
+   <p>IT | Stephen King </p>
    <br>
    <p>$50</p>
   <mat-card-actions>
@@ -113,18 +113,18 @@
 <!-- <mat-card fxflex="30%"  class="bookscard" >
   <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
   <mat-card-title class="tit">
-   <p>IT | Stephen King </p> 
+   <p>IT | Stephen King </p>
    <br>
    <p>$50</p>
   <mat-card-actions>
     <button class="byt" mat-flat-button color="primary">Add to Cart</button>
   </mat-card-actions>
   </mat-card-title>
-</mat-card> 
+</mat-card>
  -->
 
 
-<!-- 
+<!--
   </div>  -->
 
 <div class="row container-fluid uui">
@@ -137,9 +137,9 @@
         <h1 class="card-title op" (click)="productDetails(doc)" routerLink="/productdetails">{{doc.bookname}}</h1>
         <h1 class="card-title op" (click)="productDetails(doc)" routerLink="/productdetails">by {{doc.author}}</h1>
         <div class="">
-        
+
         <h1 class="card-title op" (click)="productDetails(doc)" routerLink="/productdetails">${{doc.price}}</h1>
-        
+
         <div class="btn-group" role="group" style="margin-left: 25px;">
         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         <a class="btn btn-primary  q" style="width: auto;"

@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   visible:Boolean=true;
   registerForm: FormGroup;
   submitted = false;
-  mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";
+  // mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";
 
 
   constructor(private router: Router, private authService: AuthService, private _snackBar: MatSnackBar, private formbuilder: FormBuilder) { }
@@ -37,6 +37,7 @@ export class RegisterComponent implements OnInit {
       inputCountryCode: [null, [Validators.required, Validators.pattern("[0-9 ]{12}")]],
       password: ["", [Validators.required, Validators.minLength(6)]],
       confirmPassword: ["", Validators.required],
+      address:["", Validators.required],
     }, {
       validators: PasswordChecker("password", "confirmPassword"),
     });

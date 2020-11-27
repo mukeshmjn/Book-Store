@@ -41,15 +41,15 @@
             </div>
           </div>
 
-          <ng-container *ngIf="h.email.touched && h.email.errors">
+          <!-- <ng-container *ngIf="h.email.touched && h.email.errors">
             <div *ngIf="h.email.errors.required" class="text-danger">
               Value is required.
             </div>
-          </ng-container>
+          </ng-container> -->
 
           <div class="form-group col-6 ">
             <label>Phone Number</label>
-            <input type="text" class="form-control"  autocomplete="off"
+            <input type="text" class="form-control" autocomplete="off"
               [ngClass]="{ 'is-invalid': submitted && h.inputCountryCode.errors }" formControlName="inputCountryCode">
             <div
               *ngIf="(h.inputCountryCode.invalid ) || (h.inputCountryCode.invalid && (h.inputCountryCode.dirty || h.inputCountryCode.touched))"
@@ -59,8 +59,9 @@
             </div>
           </div>
         </div>
+
         <div class="form-row">
-          <div class="form-group col">
+          <div class="form-group col-6">
             <label>Password</label>
             <input formControlName="password" [ngClass]="{ 'is-invalid': submitted && h.password.errors }"
               type="password" class="form-control" />
@@ -71,7 +72,7 @@
               </div>
             </div>
           </div>
-          <div class="form-group col">
+          <div class="form-group col-6">
             <label>Confirm Password</label>
             <input formControlName="confirmPassword" [ngClass]="{
                 'is-invalid': submitted && h.confirmPassword.errors
@@ -84,15 +85,30 @@
                 Passwords must match
               </div>
             </div>
+            </div>
           </div>
-        </div>
-        <div class="text-center">
-          <button class="btn btn-success btn-lg px-4 mr-3">Register</button>
+          <div class="form-row">
+            <div class="form-group col">
+              <label>Address</label>
+              <input formControlName="address" [ngClass]="{ 'is-invalid': submitted && h.address.errors }" type="text"
+              class="form-control" />
+              <div *ngIf="submitted && h.address.errors" class="text-warning">
+                <div *ngIf="h.address.errors.required">
+                  Address is required
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <p class="text white">Value: {{ registerForm.value | json }}</p>
-          <p class="text white">Value: {{ registerForm.valid | json }}</p>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+
+              <div class="text-center">
+                <button class="btn btn-success btn-lg px-4 mr-3">Register</button>
+
+                <p class="text white">Value: {{ registerForm.value | json }}</p>
+                <p class="text white">Value: {{ registerForm.valid | json }}</p>
+                </div>
+
+                </form>
+              </div>
+            </div>
+          </div>

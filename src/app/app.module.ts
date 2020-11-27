@@ -44,6 +44,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { RegisterComponent } from './register/register.component';
+import { PagenotfoundComponent}   from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { RegisterComponent } from './register/register.component';
     OrderdetailsComponent,
     ProductdetailsComponent,
     RegisterComponent,
-   
+    PagenotfoundComponent
+
   ],
   imports: [
     BrowserModule,
