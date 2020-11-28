@@ -27,7 +27,7 @@ p{
     word-spacing: 5px;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:500px) {
   // img {
   //     width:100%;
   // }
@@ -44,12 +44,12 @@ p{
       height: 50%;
   }
   .row{
-    border: solid rgb(201, 76, 76);
+    // border: solid rgb(201, 76, 76);
     margin-left: 15px;
     width: 250px;
     padding-top: 2px;
     border-radius: 5px;
-    box-shadow: 5px 5px 15px rgb(230, 162, 36);
+    // box-shadow: 5px 5px 15px rgb(230, 162, 36);
 }
 .product-description{
   margin-top: 25px;

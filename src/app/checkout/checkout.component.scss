@@ -16,7 +16,7 @@ input.ng-invalid.ng-touched {
     border-color: red;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:500px) {
   // img {
   //     width:100%;
   // }
@@ -33,7 +33,7 @@ input.ng-invalid.ng-touched {
   label{
     width: 100%;
     text-align: center;
-    color:red;
+    // color:red;
   }
   button{
     color: red;
