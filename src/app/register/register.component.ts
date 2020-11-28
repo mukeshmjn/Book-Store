@@ -18,6 +18,7 @@ import {
 export class RegisterComponent implements OnInit {
   email: string;
   password: string;
+  pno:string;
   firstName: string;
   lastName: string;
   inputCountryCode: string;
@@ -56,14 +57,14 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
-
+ 
     this.email = this.registerForm.value.email;
     this.password = this.registerForm.value.password;
     this.firstName = this.registerForm.value.firstName;
     this.lastName = this.registerForm.value.lastName;
-    this.inputCountryCode = this.registerForm.value.inputCountryCode;
     
-
+    this.pno = this.registerForm.value.pno;
+ 
     this.signup();
 
   }
@@ -78,7 +79,7 @@ export class RegisterComponent implements OnInit {
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.registerForm.value.email,
-      inputCountryCode: this.inputCountryCode
+      pno: this.pno
 
      
      })
@@ -87,7 +88,7 @@ export class RegisterComponent implements OnInit {
          localStorage.setItem('email',this.registerForm.value.email);
          localStorage.setItem('firstName', this.firstName);
          localStorage.setItem('lastName', this.lastName );
-         localStorage.setItem('inputCountryCode', this.inputCountryCode);
+         localStorage.setItem('pno', this.pno);
          
     
      })

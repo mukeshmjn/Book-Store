@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   myArray: any[] = []
   books: Home[];
   email: any;
+  pno:any;
   firstName: any;
   lastName: any;
   inputCountryCode: any;
@@ -48,7 +49,7 @@ export class HomeComponent implements OnInit {
  this.email = localStorage.getItem('email');
  this.firstName = localStorage.getItem('firstName');
  this.lastName = localStorage.getItem('lastName' );
- this.inputCountryCode = localStorage.getItem('inputCountryCode');
+ this.pno = localStorage.getItem('pno');
     
     
 

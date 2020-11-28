@@ -8,7 +8,7 @@
 
        <mat-card *ngIf="!(authService.user | async)" >
         <mat-toolbar color="primary" >
-            <span >LOGIN / SIGNUP</span>
+            <span >LOGIN </span>
           </mat-toolbar>
       
         <span *ngIf="errmsg" style="margin-bottom: 0px;color:red;font-weight: 570;">
@@ -33,7 +33,7 @@
           <mat-card-actions>
             <button mat-raised-button [disabled]="!email || !password"  (click)="login()" color="primary">LOGIN</button>
 
-            <button mat-raised-button [disabled]="!email || !password"  (click)="signup()" color="primary">SIGNUP</button>
+    
          </mat-card-actions>
 
 
