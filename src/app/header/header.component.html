@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <!-- <mat-toolbar style="background-color: #2b0f42;width: 100%;"class="abc">
   <!-- <div fxHide.gt-xs>
     <button mat-icon-button >
@@ -67,32 +66,32 @@
 
   </mat-sidenav-container>
 </div> -->
-<nav class="navbar navbar-expand-lg  aaa text-white abc ">
-=======
+<!-- <nav class="navbar navbar-expand-lg  aaa text-white abc "> -->
 
-<nav class="navbar navbar-expand-lg  aaa text-white ">
->>>>>>> 2252f159b1ca29b8296624540ca00910fa68d7f5
-  <a class="navbar-brand m" href="#">BookStore</a>
-  <button style="background-color:black;width:0px;width: -2px;
-  font-size: 14px; padding-right: 40px;" class="navbar-toggler "  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" style="background-color: black;">Menu</span>
-  </button>
+  <nav class="navbar navbar-expand-lg  aaa text-white ">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="navbar-nav mr-auto up def">
-    
-      <a mat-button routerLink="/home" ><span  class=" botu">Home</span> </a>
-      <a mat-button  routerLink="/aboutus"><span class=" botu"> ABOUT</span> </a>
-      <a mat-button  routerLink="/contactus"><span class=" botu" >CONTACT</span> </a>
-      <span class="y navbar-right">
-      <a mat-button class=" lr" *ngIf="!(authService.user | async)"  routerLink="/login"> Login </a>
-      <a mat-button class="" *ngIf="!(authService.user | async)"  routerLink="/register"> Register </a>
-      <a mat-button class="lr " *ngIf="authService.user | async" (click)="logout()" (click)="openSnackBar()"    > Logout </a>
-      <a mat-button  *ngIf="authService.user | async" routerLink="/cart" > Cart </a>
-      <a mat-button class="ld"  *ngIf="authService.user | async" routerLink="/orders" > Orders </a>
-    </span>
-
+    <a class="navbar-brand m" href="#">BookStore</a>
+    <button style="background-color:black;width:0px;width: -2px;
+    font-size: 14px; padding-right: 40px;" class="navbar-toggler "  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="background-color: black;">Menu</span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav mr-auto up def">
+  
+        <a mat-button routerLink="/home" ><span  class=" botu">Home</span> </a>
+        <a mat-button  routerLink="/aboutus"><span class=" botu"> ABOUT</span> </a>
+        <a mat-button  routerLink="/contactus"><span class=" botu" >CONTACT</span> </a>
+        <span class="y navbar-right">
+        <a mat-button class=" lr" *ngIf="!(authService.user | async)"  routerLink="/login"> Login </a>
+        <a mat-button class="" *ngIf="!(authService.user | async)"  routerLink="/register"> Register </a>
+        <a mat-button class="lr " *ngIf="authService.user | async" (click)="logout()" (click)="openSnackBar()"    > Logout </a>
+        <a mat-button  *ngIf="authService.user | async" routerLink="/cart" > Cart </a>
+        <a mat-button class="ld"  *ngIf="authService.user | async" routerLink="/orders" > Orders </a>
+      </span>
+  
+      </div>
+  
     </div>
-
-  </div>
-</nav>
+  </nav>
+  
