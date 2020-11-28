@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
+=======
+.abc{
+
+  margin-bottom: 0px;
+
+  margin-top:0px;
+}
+>>>>>>> 052bba7f7d47d5fa3bd8efcfec0ad7262de22609
 .aaa{
   background-color: #2b0f42;
   color:white;
@@ -6,11 +15,12 @@
 
 .def{
   margin-left:400px;
+  margin-top: 1px;
 
 }
 
 mat-button{
-  padding:10px;
+  padding:5px;
 
 }
 
@@ -27,13 +37,24 @@ mat-button{
 }
 
 .y{
-    margin-left:350px;
+    margin-left:250px;
+    font-weight: bold;
 }
 
 .botu:hover{
   text-decoration: underline red;
 }
 
+<<<<<<< HEAD
+=======
+.lr{
+  margin-left: 70px;
+}
+// .ld{
+//   margin-top: 0px;
+//   margin-right: 60px;
+// }
+>>>>>>> 052bba7f7d47d5fa3bd8efcfec0ad7262de22609
 
 
 @media screen and (max-width:500px) {
