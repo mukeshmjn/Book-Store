@@ -1,9 +1,9 @@
-// .abc{
+.abc{
 
-//   margin-bottom: 0px;
+  margin-bottom: 0px;
 
-//   margin-top:0px;
-// }
+  margin-top:0px;
+}
 .aaa{
   background-color: #2b0f42;
   color:white;
@@ -11,11 +11,12 @@
 
 .def{
   margin-left:400px;
+  margin-top: 1px;
 
 }
 
 mat-button{
-  padding:10px;
+  padding:5px;
 
 }
 
@@ -33,15 +34,20 @@ mat-button{
 }
 
 .y{
-    margin-left:350px;
+    margin-left:250px;
+    font-weight: bold;
 }
 
 .botu:hover{
   text-decoration: underline red;
 }
 
-// .lr{
-//   margin-left: 50px;
+.lr{
+  margin-left: 70px;
+}
+// .ld{
+//   margin-top: 0px;
+//   margin-right: 60px;
 // }
 
 // .menu-spacer {
