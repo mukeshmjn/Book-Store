@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.errmsg=false
       this.router.navigate(['home'])
       console.log('snackbar hai g')
-      
+    
       this._snackBar.open('Sign Up Successful', 'Welcome', {
         duration: 500,
 
@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('firstName', this.user.firstName);
         localStorage.setItem('lastName', this.user.lastName );
         localStorage.setItem('inputCountryCode', this.user.inputCountryCode);
-    
+        
         })
          
         
@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
          this.errmsg=false
          this.router.navigate(['home'])
          console.log('snackbar hai g')
-     
+         
          this._snackBar.open('Login Successful', 'Welcome', {
            duration: 500,
 
