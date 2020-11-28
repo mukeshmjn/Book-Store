@@ -41,11 +41,11 @@
             </div>
           </div>
 
-          <ng-container *ngIf="h.email.touched && h.email.errors">
+          <!-- <ng-container *ngIf="h.email.touched && h.email.errors">
             <div *ngIf="h.email.errors.required" class="text-danger">
               Value is required.
             </div>
-          </ng-container>
+          </ng-container> -->
 
           <div class="form-group col-6 ">
             <label>Phone Number</label>
@@ -88,9 +88,9 @@
         </div>
         <div class="text-center">
           <button class="btn btn-success btn-lg px-4 mr-3">Register</button>
-
+<!-- 
           <p class="text white">Value: {{ registerForm.value | json }}</p>
-          <p class="text white">Value: {{ registerForm.valid | json }}</p>
+          <p class="text white">Value: {{ registerForm.valid | json }}</p> -->
         </div>
       </form>
     </div>

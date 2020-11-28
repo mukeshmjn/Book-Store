@@ -23,6 +23,7 @@ export class AuthService {
       //   console.log('Something went wrong:',err.message);
       // });
   }
+  
 
   login(email: string, password: string) {
   return  this.firebaseAuth

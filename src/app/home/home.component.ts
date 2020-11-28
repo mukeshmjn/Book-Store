@@ -22,6 +22,10 @@ import {
 export class HomeComponent implements OnInit {
   myArray: any[] = []
   books: Home[];
+  email: any;
+  firstName: any;
+  lastName: any;
+  inputCountryCode: any;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
@@ -41,7 +45,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
  this.getBooks();
  
-    
+ this.email = localStorage.getItem('email');
+ this.firstName = localStorage.getItem('firstName');
+ this.lastName = localStorage.getItem('lastName' );
+ this.inputCountryCode = localStorage.getItem('inputCountryCode');
     // debugger
     // this.cart.getMsg().subscribe(myArray =>{ 
     //   debugger

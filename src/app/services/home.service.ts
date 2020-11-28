@@ -20,4 +20,6 @@ deleteBook(homeId: string){
   this.firestore.doc('home/' + homeId).delete();
 }
 
+
+
 }

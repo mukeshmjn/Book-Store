@@ -24,6 +24,10 @@ export class HeaderComponent implements OnInit {
   }
   logout() {
     this.authService.logout();
+    localStorage.removeItem('email');
+     localStorage.removeItem('firstName');
+      localStorage.removeItem('lastName' );
+       localStorage.removeItem('inputCountryCode');
     this.router.navigateByUrl('/home');
    console.log("logout successful")
   }

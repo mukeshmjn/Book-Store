@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { AngularFirestore, docChanges } from "@angular/fire/firestore";
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
@@ -19,8 +20,9 @@ export class LoginComponent implements OnInit {
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
   show_password: Boolean = false;
   visible:Boolean=true;
+  user:any
 
-  constructor(public authService: AuthService,
+  constructor(private firestore: AngularFirestore,public authService: AuthService,
   public router:Router,
   private _snackBar: MatSnackBar ) { }
 
@@ -55,6 +57,20 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.email, this.password) .then(value => {
        console.log('Nice, it worked!');
          console.log(value)
+         var luid = value.user.uid;
+        this.firestore.collection('users').doc(luid).get().subscribe(snapshot=>{
+        
+        this.user = snapshot.data();
+        console.log('user: ',this.user)
+        localStorage.setItem('email',this.user.email);
+        localStorage.setItem('firstName', this.user.firstName);
+        localStorage.setItem('lastName', this.user.lastName );
+        localStorage.setItem('inputCountryCode', this.user.inputCountryCode);
+        debugger
+        })
+         
+        
+      
          this.errmsg=false
          this.router.navigate(['home'])
          console.log('snackbar hai g')
