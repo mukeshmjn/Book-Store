@@ -75,7 +75,6 @@ import { PagenotfoundComponent}   from './pagenotfound/pagenotfound.component';
     RouterModule,
     AppRoutingModule,
     FontAwesomeModule,
-    //firebase
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,

@@ -13,7 +13,7 @@ export class ProductdetailsComponent implements OnInit {
   ngOnInit() {
 
     this.pdetails.pdetails.subscribe(mesg =>{
-      debugger
+     
       console.log(mesg);
       this.product = mesg.value;
       console.log(this.product)

@@ -28,111 +28,7 @@
   </a>
 </div>
 
-<!-- <div class="container">
-  fjbvbh
-  bkjvfb
-  <p>vhjbvc</p>
-</div> -->
 
-<!-- <div class="container col-3" fxLayout="row-wrap"
-  fxLayoutWrap
-     fxLayout="row"
-     fxLayout.sm="column"
-     fxLayout.xs="column"
-     fxLayoutAlign.gt-md="space-around center"
-     fxLayoutGap="10px" >
-
-<mat-card *ngFor='let doc of books' fxflex="30%"  class="bookscard">
-  <img  mat-card-image src="{{doc.image}}" alt="it book" class="itb">
-  <mat-card-title class="tit">
-   <p  #book1="ngModel" [(ngModel)]="doc.book1">{{doc.book1}} </p>
-   <br>
-   <p >${{doc.price}}</p>
-  <mat-card-actions>
-    <button class="byt" mat-flat-button color="primary"(click)="openSnackBar()" aria-label="Show an example snack-bar"  >Add to Cart</button>
-    <button style="margin-top:10px" routerLink="/productdetails" (click)= "productDetails(doc)" class="byt" mat-flat-button color="primary">Details</button>
-  </mat-card-actions>
-  </mat-card-title>
-</mat-card>
-
-<mat-card fxflex="30%"  class="bookscard">
-  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
-  <mat-card-title class="tit">
-   <p >IT | Stephen King </p>
-   <br>
-   <p>$50</p>
-  <mat-card-actions>
-    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
-  </mat-card-actions>
-  </mat-card-title>
-</mat-card>
-
-<mat-card fxflex="30%"  class="bookscard">
-  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
-  <mat-card-title class="tit">
-   <p>IT | Stephen King </p>
-   <br>
-   <p>$50</p>
-  <mat-card-actions>
-    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
-  </mat-card-actions>
-  </mat-card-title>
-</mat-card>
-
-<mat-card fxflex="30%"  class="bookscard">
-  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
-  <mat-card-title class="tit">
-   <p>IT | Stephen King </p>
-   <br>
-   <p>$50</p>
-  <mat-card-actions>
-    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
-  </mat-card-actions>
-  </mat-card-title>
-</mat-card>
-
-<mat-card fxflex="30%"  class="bookscard">
-  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
-  <mat-card-title class="tit">
-   <p>IT | Stephen King </p>
-   <br>
-   <p>$50</p>
-  <mat-card-actions>
-    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
-  </mat-card-actions>
-  </mat-card-title>
-</mat-card>
-
-
-<mat-card fxflex="30%"  class="bookscard">
-  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
-  <mat-card-title class="tit">
-   <p>IT | Stephen King </p>
-   <br>
-   <p>$50</p>
-  <mat-card-actions>
-    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
-  </mat-card-actions>
-  </mat-card-title>
-</mat-card>
-
--->
-<!-- <mat-card fxflex="30%"  class="bookscard" >
-  <img mat-card-image src="/assets/it.jpg" alt="it book" class="itb">
-  <mat-card-title class="tit">
-   <p>IT | Stephen King </p>
-   <br>
-   <p>$50</p>
-  <mat-card-actions>
-    <button class="byt" mat-flat-button color="primary">Add to Cart</button>
-  </mat-card-actions>
-  </mat-card-title>
-</mat-card>
- -->
-
-
-<!--
-  </div>  -->
 
 <div class="row container-fluid uui">
 <div class="col-lg-3 col-md-4 icon-box p-5" data-aos="fade-up"  *ngFor="let doc of books">
@@ -148,7 +44,7 @@
         <h1 class="card-title op" (click)="productDetails(doc)" routerLink="/productdetails">${{doc.price}}</h1>
 
         <div class="btn-group" role="group" style="margin-left: 25px;">
-        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      
         <a class="btn btn-primary  q" style="width: auto;"
           (click)="productDetails(doc)" routerLink="/productdetails">Details</a>
          <a class="btn btn-primary  q" style="width: auto;"
@@ -161,18 +57,4 @@
 </div>
 </div>
 
-  <!-- <div class="row">
-    <div class="col-sm-3" *ngFor="let doc of books">
-      <div class="card an border-info row" style="width: 18rem;"    >
-        <img class="card-img-top am" src="{{doc.image}}" alt="Card image cap" routerLink="/productdetails" (click)= "productDetails(doc)">
-        <div class="card-body bb" >
-          <h1 class="card-title op" (click)= "productDetails(doc)" routerLink="/productdetails">{{doc.bookname}}</h1>
-          <h1 class="card-title op" (click)= "productDetails(doc)" routerLink="/productdetails">by {{doc.author}}</h1>
-          <h1 class="card-title op" (click)= "productDetails(doc)" routerLink="/productdetails">${{doc.price}}</h1>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a  class="btn btn-primary btn-lg btn-block q" (click)="addtocart(doc,doc.id)" (click)="openSnackBar()">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-    </div> -->
-
+ 

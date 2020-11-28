@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   visible:Boolean=true;
   registerForm: FormGroup;
   submitted = false;
-  // mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";
+
 
 
 
@@ -56,27 +56,25 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
-  // console.table(this.registerForm)
-    // console.table(this.registerForm.value);
+
     this.email = this.registerForm.value.email;
     this.password = this.registerForm.value.password;
     this.firstName = this.registerForm.value.firstName;
     this.lastName = this.registerForm.value.lastName;
     this.inputCountryCode = this.registerForm.value.inputCountryCode;
-    // debugger
+    
 
     this.signup();
 
-    // alert("Success Signup\n" + JSON.stringify(this.registerForm.value));
   }
   
   signup() {
     this.authService.signup(this.email, this.password).then(value => {
       console.log('Success!', value);
-      debugger
+     
       var suid = value.user.uid;
       this.firestore.collection('users').doc(suid).set({
-      // abc:'Mukesh'
+
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.registerForm.value.email,
@@ -91,17 +89,16 @@ export class RegisterComponent implements OnInit {
          localStorage.setItem('lastName', this.lastName );
          localStorage.setItem('inputCountryCode', this.inputCountryCode);
          
-         
-      //  debugger
+    
      })
      .catch(e => {
          console.log(e);
      })
       this.errmsg=false
       this.router.navigate(['home'])
-      // console.log(value.user.uid);
+   
       console.log('snackbar hai g')
-      debugger
+    
       this._snackBar.open('Sign Up Successful', 'Welcome', {
         duration: 500,
       
@@ -119,26 +116,4 @@ export class RegisterComponent implements OnInit {
     
   }
 
- // signup() {
-  //   this.authService.signup(this.email, this.password).then(value =>   {
-  //     console.log('Success!', value);
-  //     this.errmsg=false
-  //     this.router.navigate(['home'])
-  //     console.log('snackbar hai g')
-  //     debugger
-  //     this._snackBar.open('Sign Up Successful', 'Welcome', {
-  //       duration: 500,
-
-  //       horizontalPosition: this.horizontalPosition,
-  //       verticalPosition: this.verticalPosition,
-  //     });
-  //   })
-  //   .catch(err => {
-  //     console.log('Something went wrong:',err.message);
-  //     this.errmsg=true
-
-
-  //   });
-  //   this.email = this.password = '';
-  // }
 }

@@ -1,62 +1,18 @@
-<!--
-
-<h1 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:35px; padding:10px;word-spacing:5px"><b>Your Shopping Cart</b></h1>
-<div *ngFor='let doc of books' >
-
-<div class="cart-row">
-    <mat-grid-list   cols="7" rowHeight="100px">
-      <mat-grid-tile><img width="70px" src="/assets/it.jpg"/></mat-grid-tile>
-      <mat-grid-tile
-        > {{doc.book1}}
-        </mat-grid-tile
-      >
-      <mat-grid-tile>{{doc.price}}</mat-grid-tile>
-      <mat-grid-tile>{{doc.price}}</mat-grid-tile>
 
 
-      <mat-grid-tile
-        ><button style='background-color: red' (click)="delete(doc.id)">Delete</button>
-         </mat-grid-tile
-      >
-
-    </mat-grid-list>
-
-  </div>
-
-  <mat-divider></mat-divider>
-
-</div>
-
-
-
-
-
-
-
-  <div>
-  <div style="font-size:25px; margin-top:25px; text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >  Total : $250  </div>
-  <div>
-      <button mat-raised-button color="primary" (click)="sendOrderData()" routerLink="/checkout" style="width:100%; margin-top:25px"> Checkout </button>
-
-  </div>
-
-  </div>
-
-   -->
-
-   <!--Section: Block Content-->
+   
    <h1 style="text-align:center;font-family:fantasy">
      Your Shopping Cart
    </h1>
 <section  >
-  <!--Grid row-->
+ 
   <div class="row" >
-    <!--Grid column-->
+  
     <div class="col-lg-8" >
-      <!-- Card -->
+      
       <div class="mb-3 card">
         <div class="pt-4 wish-list"  *ngFor="let doc of books">
-          <!-- <h5 class="mb-4">Cart (<span>2</span> items)</h5> -->
+         
 
           <div class="row mb-4">
             <div class="col-md-5 col-lg-3 col-xl-3">
@@ -76,22 +32,9 @@
                     <p class="mb-2 text-muted text-uppercase small">
                       Pages: {{doc.pages}}
                     </p>
-                    <!-- <p class="mb-3 text-muted text-uppercase small">Size: M</p> -->
+                  
                   </div>
-                  <!-- <div>
-                    <div class="def-number-input number-input mb-0 w-100">
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">
-                        -
-                      </button>
-                      <input class="quantity" min="0" name="quantity" value="1" type="number" />
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
-                        +
-                      </button>
-                    </div>
-                    <small id="passwordHelpBlock" class="form-text text-muted text-center">
-                      (Note, 1 piece)
-                    </small>
-                  </div> -->
+                 
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
@@ -109,73 +52,14 @@
             </div>
           </div>
           <hr class="mb-4" />
-          <!-- <div class="row mb-4">
-            <div class="col-md-5 col-lg-3 col-xl-3">
-              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-                <img class="img-fluid w-100"
-                  src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg" alt="Sample" />
-              </div>
-            </div>
-            <div class="col-md-7 col-lg-9 col-xl-9">
-              <div>
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <h5>Red hoodie</h5>
-                    <p class="mb-3 text-muted text-uppercase small">
-                      Shirt - red
-                    </p>
-                    <p class="mb-2 text-muted text-uppercase small">
-                      Color: red
-                    </p>
-                    <p class="mb-3 text-muted text-uppercase small">Size: M</p>
-                  </div>
-                  <div>
-                    <div class="def-number-input number-input mb-0 w-100">
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">
-                        -
-                      </button>
-                      <input class="quantity" min="0" name="quantity" value="1" type="number" />
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 text-danger"><i
-                        class="fas fa-trash-alt mr-1"></i> Remove item
-                    </a>
-                    <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
-                        class="fas fa-heart mr-1"></i> Move to wish list
-                    </a>
-                  </div>
-                  <p class="mb-0">
-                    <span><strong>$35.99</strong></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> -->
+        
           <p class="text-primary mb-0 col-sm-6 ">
             <i class="fas fa-info-circle mr-1"></i> Do not delay the purchase,
             adding items to your cart does not mean booking them.
           </p>
         </div>
       </div>
-      <!-- Card -->
-
-      <!-- Card -->
-      <!-- <div class="mb-3 card">
-        <div class="pt-4">
-          <h5 class="mb-4">Expected shipping delivery</h5>
-
-          <p class="mb-0">Thu., 12.03. - Mon., 16.03.</p>
-        </div>
-      </div> -->
-      <!-- Card -->
-
-      <!-- Card -->
+    
       <div class="mb-3 card">
         <div class="pt-4">
           <h5 class="mb-4">We accept</h5>
@@ -194,13 +78,11 @@
             alt="PayPal acceptance mark" />
         </div>
       </div>
-      <!-- Card -->
+     
     </div>
-    <!--Grid column-->
 
-    <!--Grid column-->
     <div class="col-lg-4">
-      <!-- Card -->
+
       <div class="mb-3 card">
         <div class="pt-4">
           <h5 class="mb-3">Total Amount to be Paid</h5>
@@ -217,9 +99,7 @@
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
               <div>
                 <strong>Total Amount </strong>
-                <!-- <strong>
-                  <p class="mb-0">(including VAT)</p>
-                </strong> -->
+                
               </div>
               <span><strong>${{totalPrice}}</strong></span>
             </li>
@@ -230,9 +110,7 @@
           </button>
         </div>
       </div>
-      <!-- Card -->
-
-      <!-- Card -->
+   
       <div class="mb-3 card">
         <div class="pt-4">
           <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
@@ -246,15 +124,16 @@
               <div class="md-form md-outline mb-0">
                 <input type="text" id="discount-code" class="form-control font-weight-light"
                   placeholder="Enter discount code" />
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Card -->
+
     </div>
-    <!--Grid column-->
+
   </div>
-  <!-- Grid row -->
+
 </section>
-<!--Section: Block Content-->
+

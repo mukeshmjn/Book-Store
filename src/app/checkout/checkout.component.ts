@@ -38,7 +38,7 @@ export class CheckoutComponent implements OnInit {
   });
   ngOnInit() {
   this.sendorder.message.subscribe(mesg =>{
-    debugger
+  
     console.log(mesg);
     this.orders = mesg.value;
     this.orderstotal = mesg.total
@@ -68,12 +68,12 @@ onSubmit(){
   //   });
     
   // })
-  debugger
+
   this.ordersplaced=this.form.value
-  debugger
+
   this.orders.forEach((abc)=>{
     console.log(this.orders)
-    debugger
+
     this.firestore.collection('orders').add({
       bookname: abc.bookname,
       author:abc.author,
@@ -91,19 +91,19 @@ onSubmit(){
    .then(res => {
        console.log(res);
      
-     debugger
+    
    })
    .catch(e => {
        console.log(e);
    })
    console.log(abc.id)
    this.cart.deleteBook(abc.id)
-   debugger;
+  
    console.log(abc.id)
   })
   console.log(this.ordersplaced)
-;
- debugger
+
+
   
     
 }

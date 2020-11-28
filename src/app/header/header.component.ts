@@ -15,7 +15,7 @@ import {
 export class HeaderComponent implements OnInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
-  // @Output() public sidenavToggle = new EventEmitter();
+
 
   constructor(public authService: AuthService,
    private router:Router,
@@ -32,14 +32,12 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/home');
    console.log("logout successful")
   }
-  // public onToggleSidenav = () => {
-  //   this.sidenavToggle.emit();
-  // }
+
 
   openSnackBar() {
-    debugger
+  
     console.log('snackbar hai g')
-    debugger
+
     this._snackBar.open('logout successful', 'Thanks', {
       duration: 500,
 

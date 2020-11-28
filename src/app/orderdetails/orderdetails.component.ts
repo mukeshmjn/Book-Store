@@ -12,7 +12,7 @@ export class OrderdetailsComponent implements OnInit {
   ngOnInit() {
     
     this.odetails.odetails.subscribe(mesg =>{
-      debugger
+     
       console.log(mesg);
       this.order = mesg.value;
       console.log(this.order)
