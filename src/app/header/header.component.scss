@@ -1,8 +1,12 @@
-.abc{
+// .abc{
 
-  margin-bottom: 0px;
+//   margin-bottom: 0px;
 
-  margin-top:0px;
+//   margin-top:0px;
+// }
+.aaa{
+  background-color: #2b0f42;
+  color:white;
 }
 
 .def{
@@ -36,6 +40,31 @@ mat-button{
   text-decoration: underline red;
 }
 
-.lr{
-  margin-left: 50px;
+// .lr{
+//   margin-left: 50px;
+// }
+
+// .menu-spacer {
+//   flex: 1 1 auto;
+// }
+
+@media screen and (max-width:500px) {
+  .y{
+    margin-left:1px;
+}
+.def{
+  margin-left:1px;
+
+}
+.botu{
+  font-weight: bold;
+  color:red;
+
+}
+mat-button{
+  padding:1px;
+
+}
+
+
 }
