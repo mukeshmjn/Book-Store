@@ -38,7 +38,7 @@ contactform = new FormGroup({
   onSubmit(){
 
     this.abc= this.contactform.value;
-    debugger
+  
     console.log(this.abc)
 
     emailjs.send('service_eaqjhp7', 'template_fzhae28', this.abc, 'user_BVzdes597wCCCvMgmjev4')

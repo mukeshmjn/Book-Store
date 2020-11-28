@@ -53,9 +53,9 @@ export class CartComponent implements OnInit {
     this.sendorder.sendDetails({type:'SEND-ORDER_DETAILS',value:this.books,total:this.totalPrice})
   }
   delete(value) {
-    debugger
+    
     console.log(value)
-    debugger
+    
     // if (confirm('Delete?')) {
     //     this.firestore.collection('cart').doc(value).delete().then(()=>{
 
@@ -84,7 +84,7 @@ getBooks(){
   // })
   this.cart.getBooks().subscribe(data => {
     this.books = data.map(e => {
-      debugger
+    
       return {
         id: e.payload.doc.id,
         ...e.payload.doc.data() as Home
@@ -112,7 +112,7 @@ console.log(bookPrices)
 console.log(this.totalPrice)
 
   });
-  console.log('abcd')
+ 
   
     }
 

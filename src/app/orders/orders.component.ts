@@ -16,24 +16,11 @@ export class OrdersComponent implements OnInit {
     this.getOrders()
   }
   getOrders(){
-    //   this.firestore
-    // .collection("home1")
-    // .get()
-    // .subscribe((ss) => {
-    //   ss.docs.forEach((doc) => {
-    //     debugger
-    //     this.myArray.push(doc.data());
-    //     // debugger;
-    //     debugger
-    //    console.log(doc);
-    //     // this.addtocart(doc.data());
-    //     // this.sendMsg(doc)
-    //   });
-      
-    // })
+  
+  
     this.orderService.getOrders().subscribe(data => {
       this.orders = data.map(e => {
-        debugger
+     
         return {
           id: e.payload.doc.id,
           ...e.payload.doc.data() as Orders
@@ -49,7 +36,7 @@ export class OrdersComponent implements OnInit {
       {
         console.log(def);
         this.odetails.orderDetails({type:'SEND-ORDER_DETAILS',value:def})
-        debugger
+        
       }
 
 }
