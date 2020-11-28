@@ -9,7 +9,7 @@ $background-pale: #D1C4E9;
 }
 
 .footer{
-   
+
     @include zero-margin(20px, 0px);
     width:100%;
     height:300px;
@@ -41,3 +41,49 @@ $background-pale: #D1C4E9;
 .ad{
     margin-left: 250px;
 }
+@media screen and (max-width:400px) {
+  // img {
+  //     width:100%;
+  // }
+  .container {
+      max-width:100%;
+      width: 100%;
+  }
+  .footer{
+
+    @include zero-margin(0px, 0px);
+    width:100%;
+    height:400px;
+    background-color: #ee2e14;
+    color: rgb(54, 47, 47);
+    margin-top: 0px;
+    padding: 1px;
+    // background-size: cover;
+}
+.def{
+  font-size:10px;
+  font-family: Sofia;
+}
+.ad{
+  margin-left: 1px;
+}
+.lst{
+  color:white;
+  font-size: 10px;
+}
+mat-list{
+  margin: 0px;
+  padding: 1px;
+
+}
+.visually-hidden {
+  // clip-path: inset(100%);
+  // clip: rect(1px, 1px, 1px, 1px);
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0px;
+
+}
+  }

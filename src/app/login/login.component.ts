@@ -33,13 +33,14 @@ export class LoginComponent implements OnInit {
   signup() {
     this.authService.signup(this.email, this.password).then(value => {
       console.log('Success!', value);
+      console.log(value)
       this.errmsg=false
       this.router.navigate(['home'])
       console.log('snackbar hai g')
       debugger
       this._snackBar.open('Sign Up Successful', 'Welcome', {
         duration: 500,
-       
+
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
       });
@@ -47,7 +48,7 @@ export class LoginComponent implements OnInit {
     .catch(err => {
       console.log('Something went wrong:',err.message);
       this.errmsg=true
-      
+
 
     });
     this.email = this.password = '';
@@ -77,7 +78,7 @@ export class LoginComponent implements OnInit {
          debugger
          this._snackBar.open('Login Successful', 'Welcome', {
            duration: 500,
-          
+
            horizontalPosition: this.horizontalPosition,
            verticalPosition: this.verticalPosition,
          });
@@ -86,8 +87,8 @@ export class LoginComponent implements OnInit {
          console.log('Something went wrong:',err.message);
          this.errmsg=true
        });
-    this.email = this.password = '';  
-    
+    this.email = this.password = '';
+
   }
 
   logout() {
@@ -96,7 +97,7 @@ export class LoginComponent implements OnInit {
 
   showPassword() {
     console.log(this.show_password)
-    
+
     this.show_password = !this.show_password;
     this.visible= !this.visible;
   }

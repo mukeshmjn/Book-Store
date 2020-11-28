@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { RegisterComponent } from './register/register.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,7 +27,10 @@ export const routes: Routes = [
   { path: 'contactus', component: ContactComponent},
   { path: 'orders', component: OrdersComponent},
   { path: '', redirectTo: '/home',pathMatch: 'full'},
-
+  {
+    path: "**",
+    component: PagenotfoundComponent,
+  },
 
 ];
 

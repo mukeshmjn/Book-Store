@@ -1,4 +1,4 @@
-<!-- 
+<!--
 
 <h1 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:35px; padding:10px;word-spacing:5px"><b>Your Shopping Cart</b></h1>
 <div *ngFor='let doc of books' >
@@ -12,22 +12,22 @@
       >
       <mat-grid-tile>{{doc.price}}</mat-grid-tile>
       <mat-grid-tile>{{doc.price}}</mat-grid-tile>
-     
-     
+
+
       <mat-grid-tile
         ><button style='background-color: red' (click)="delete(doc.id)">Delete</button>
          </mat-grid-tile
       >
 
     </mat-grid-list>
-    
+
   </div>
 
   <mat-divider></mat-divider>
 
 </div>
 
- 
+
 
 
 
@@ -37,8 +37,8 @@
   <div style="font-size:25px; margin-top:25px; text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >  Total : $250  </div>
   <div>
       <button mat-raised-button color="primary" (click)="sendOrderData()" routerLink="/checkout" style="width:100%; margin-top:25px"> Checkout </button>
-      
-  </div>  
+
+  </div>
 
   </div>
 
@@ -48,7 +48,7 @@
    <h1 style="text-align:center;font-family:fantasy">
      Your Shopping Cart
    </h1>
-<section>
+<section  >
   <!--Grid row-->
   <div class="row" >
     <!--Grid column-->
@@ -157,7 +157,7 @@
               </div>
             </div>
           </div> -->
-          <p class="text-primary mb-0">
+          <p class="text-primary mb-0 col-sm-6 ">
             <i class="fas fa-info-circle mr-1"></i> Do not delay the purchase,
             adding items to your cart does not mean booking them.
           </p>

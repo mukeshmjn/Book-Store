@@ -18,4 +18,41 @@
 }
 .hg{
   margin-top: 50px;
+
 }
+@media screen and (max-width:400px) {
+  // img {
+  //     width:100%;
+  // }
+  .card-1 {
+      max-width:100%;
+      width: 100%;
+     float: left;
+     margin-bottom: 10px;
+     margin-top: 1px;
+  }
+  container{
+      width:100%;
+      float: left;
+      margin-bottom:15px;
+      margin-top: 0%;
+
+  }
+  p{
+    width: 100%;
+    text-align: center;
+    color:red;
+  }
+  button{
+    color: red;
+  }
+  .sq{
+    margin-left: 1px;
+  }
+  .hh{
+    margin-left: 1px;
+  }
+  .hg{
+    margin-top: 1px;
+  }
+  }

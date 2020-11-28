@@ -13,13 +13,13 @@
           </h6>
           <div class="address">
             <h5 class="headquarters">HEADQUARTERS</h5>
-  
+
             <p class="address-1">
               Main Market Jugial Distt Pathankot
             </p>
             <p class="address-2">Near HDFC Bank </p>
           </div>
-  
+
           <div class="phone">
             <h5>PHONE</h5>
             <span class="mobile-icon"></span>
@@ -55,16 +55,16 @@
                       name="First Name"
                       class="form-control"
                       type="text"
-                     formControlName="fname" 
+                     formControlName="fname"
                       [ngClass]="{'has-error' : contactform.get('fname').errors &&
                       (contactform.get('fname').touched || contactform.get('fname').dirty)}"
                     />
                     <span class="block" *ngIf="contactform.get('fname').errors &&
                     (contactform.get('fname').touched || contactform.get('fname').dirty)">
-                    <span style="color:red" *ngIf="contactform.get('fname').errors.required"> 
+                    <span style="color:red" *ngIf="contactform.get('fname').errors.required">
                       *required field
                       </span>
-                      <span style="color:red" *ngIf="contactform.get('fname').errors.minlength"> 
+                      <span style="color:red" *ngIf="contactform.get('fname').errors.minlength">
                         *minimun 2 character
                         </span>
                       </span>
@@ -72,7 +72,7 @@
                   <div class="form-group col-md-6">
                     Last Name*
                     <input
-                      type="text" 
+                      type="text"
                       class="form-control"
                       name="Last Name"
                       id="last-Name"
@@ -84,7 +84,7 @@
                     (contactform.get('lname').touched || contactform.get('lname').errors.dirty)">
                     <span style="color: red" *ngIf="contactform.get('lname').errors.required">
                       *required field</span>
-                      <span style="color:red" *ngIf="contactform.get('lname').errors.minlength"> 
+                      <span style="color:red" *ngIf="contactform.get('lname').errors.minlength">
                         *minimun 2 character
                         </span>
                     </span>
@@ -110,7 +110,7 @@
                       <span style="color: red" *ngIf="contactform.get('email').errors.pattern">
                         Provide a valid email</span>
                     </span>
-                    
+
                   </div>
                   <div class="form-group col-md-6">
                     Phone Number
@@ -127,7 +127,7 @@
                     (contactform.get('pno').touched || contactform.get('pno').errors.dirty)">
                     <span style="color: red" *ngIf="contactform.get('pno').errors.required">
                       *required field</span>
-                    
+
                     <span style="color: red" *ngIf="contactform.get('pno').errors.pattern">
                       It should be 10ch long</span>
                     </span>
@@ -174,7 +174,7 @@
                   <button (click)="onSubmit()" [disabled]="contactform.invalid"
                     type="button"
                     class="btn btn-lg btn-primary msg"
-                 
+
                   >
                     Send Message!
                   </button>
@@ -187,5 +187,4 @@
       </div>
     </div>
   </section>
- 
-  
+
