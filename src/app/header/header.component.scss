@@ -1,9 +1,11 @@
-// .abc{
 
-//   margin-bottom: 0px;
+.abc{
 
-//   margin-top:0px;
-// }
+  margin-bottom: 0px;
+
+  margin-top:0px;
+}
+
 .aaa{
   background-color: #2b0f42;
   color:white;
@@ -11,11 +13,53 @@
 
 .def{
   margin-left:400px;
+  margin-top: 1px;
 
 }
 
 mat-button{
-  padding:10px;
+  padding:5px;
+
+}
+
+* {
+  font-family: Comic Sans MS;
+  color:white;
+
+}
+
+ .botu{
+  font-weight: bold;
+  color:white
+
+}
+
+.y{
+    margin-left:250px;
+    font-weight: bold;
+}
+
+.botu:hover{
+  text-decoration: underline red;
+}.abc{
+
+  margin-bottom: 0px;
+
+  margin-top:0px;
+}
+.aaa{
+  background-color: #2b0f42;
+  color:white;
+}
+
+.def{
+  margin-left:400px;
+  margin-top: 1px;
+
+}
+
+mat-button{
+  padding:5px;
 
 }
 
@@ -33,20 +77,55 @@ mat-button{
 }
 
 .y{
-    margin-left:350px;
+    margin-left:250px;
+    font-weight: bold;
 }
 
 .botu:hover{
   text-decoration: underline red;
 }
 
-// .lr{
-//   margin-left: 50px;
+.lr{
+  margin-left: 70px;
+}
+// .ld{
+//   margin-top: 0px;
+//   margin-right: 60px;
 // }
 
 // .menu-spacer {
 //   flex: 1 1 auto;
 // }
+
+@media screen and (max-width:500px) {
+  .y{
+    margin-left:1px;
+}
+.def{
+  margin-left:1px;
+
+}
+.botu{
+  font-weight: bold;
+  color:red;
+
+}
+mat-button{
+  padding:1px;
+
+}
+
+
+}
+
+
+
+.lr{
+  margin-left: 70px;
+}
+
+
+
 
 @media screen and (max-width:500px) {
   .y{
