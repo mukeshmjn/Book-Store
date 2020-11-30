@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('email');
      localStorage.removeItem('firstName');
       localStorage.removeItem('lastName' );
-       localStorage.removeItem('inputCountryCode');
+       localStorage.removeItem('pno');
     this.router.navigateByUrl('/home');
    console.log("logout successful")
   }

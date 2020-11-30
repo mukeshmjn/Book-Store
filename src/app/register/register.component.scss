@@ -4,3 +4,49 @@ input.ng-invalid.ng-touched {
     
   
   }
+
+  .hh{
+    background-color: #673ab7;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+  }
+
+  // .aq{
+  //   border:2px solid black;
+  // }
+
+  .container{
+    border-radius: 20px;
+    margin-left: 349px;
+  }
+
+  @media screen and (max-width:500px) {
+
+    .container{
+      border-radius: 1px;
+      margin-left: -8px;
+      width: 649px;
+      
+
+    }
+
+    // .aq{
+    //   border:2px solid black;
+    // }
+
+    
+  .hh{
+    background-color: #673ab7;
+    font-size: 11px;
+    color: white;
+    // font-weight: 500;
+  }
+
+
+
+
+  }
+
+
+

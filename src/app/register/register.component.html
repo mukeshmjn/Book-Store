@@ -1,8 +1,7 @@
 <div class="container">
-  <div class="card bg-info text-white m-3 mt-5" >
-    <h5 class="card-header text-center" style="background-color: darkblue;">
-
-      Signup Form
+  <div class="card aq text-dark m-3 mt-5" style="width: 50%;" >
+    <h5 class="card-header text-center  hh" >
+        SIGNUP
     </h5>
     <div class="card-body">
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
@@ -54,7 +53,7 @@
 
           <div class="form-group col-6 ">
             <label>Phone Number</label>
-            <input type="text" class="form-control" autocomplete="off" formControlName="pno" [ngClass]="{'has-error' : registerForm.get('pno').errors &&
+            <input type="number" class="form-control" autocomplete="off" formControlName="pno" [ngClass]="{'has-error' : registerForm.get('pno').errors &&
              (registerForm.get('pno').touched || registerForm.get('pno').errors.dirty)}" />
             <span *ngIf="registerForm.get('pno').errors &&
           (registerForm.get('pno').touched || registerForm.get('pno').errors.dirty)">
@@ -90,7 +89,7 @@
             (registerForm.get('confirmPassword').touched || registerForm.get('confirmPassword').errors.dirty)">
             <span style="color: red" *ngIf="registerForm.get('confirmPassword').errors.required">
               *required field</span>
-                <span style="color: red" *ngIf="registerForm.get('confirmPassword').errors.confPassword">
+                <span style="color: red" *ngIf="registerForm.get('confirmPassword').errors.mustMatch">
                   password mismatch</span>
               </span>
             </div>
@@ -112,7 +111,7 @@
 
 
           <div class="text-center">
-            <button class="btn btn-danger btn-lg px-4 mr-3" (click)="onSubmit()" [disabled]="registerForm.invalid">Register</button>
+            <button class="btn  btn-lg px-4 mr-3" style="background-color:#673ab7;" (click)="onSubmit()" [disabled]="registerForm.invalid">Register</button>
 
           </div>
       </form>
