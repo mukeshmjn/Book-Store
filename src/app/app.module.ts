@@ -45,6 +45,9 @@ import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { RegisterComponent } from './register/register.component';
 import { PagenotfoundComponent}   from './pagenotfound/pagenotfound.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+// import { ServiceWorkerModule } from '@angular/service-worker';
+// import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -80,6 +83,9 @@ import { PagenotfoundComponent}   from './pagenotfound/pagenotfound.component';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'bookstore'),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+  //  ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+   // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
 
 
   ],
