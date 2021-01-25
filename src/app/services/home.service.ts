@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Home } from 'src/app/home.model';
+import { Observable } from 'rxjs'
 @Injectable({
   providedIn: 'root'
 })
@@ -18,6 +19,11 @@ createBook(home: Home){
 
 deleteBook(homeId: string){
   this.firestore.doc('home/' + homeId).delete();
+}
+
+getProduct(id: string){
+  
+  return this.firestore.collection('home').doc(id).get()
 }
 
 
