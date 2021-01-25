@@ -46,6 +46,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { RegisterComponent } from './register/register.component';
 import { PagenotfoundComponent}   from './pagenotfound/pagenotfound.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { NgSearchPipe } from 'ng-search-pipe';
 // import { ServiceWorkerModule } from '@angular/service-worker';
 // import { ServiceWorkerModule } from '@angular/service-worker';
 
@@ -84,6 +85,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'bookstore'),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    NgSearchPipe 
   //  ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
    // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
 

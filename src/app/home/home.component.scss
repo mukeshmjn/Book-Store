@@ -6,6 +6,15 @@
  //   margin-left:-10px;
   //  margin-right:-10px;
  }
+ .sefil{
+  margin-left: 3%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 35%;
+  margin-top: 1%;
+}
 // div{
 //   background-image: url("/assets/book.jpg");
 // }
@@ -135,6 +144,7 @@ p :hover{
 margin-top:2px
 
 }
+
 
 .p-5 {
   padding-left: 1rem!important;

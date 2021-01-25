@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   myArray: any[] = []
   books: Home[];
   email: any;
+  searchText:string;
   pno:any;
   firstName: any;
   lastName: any;
