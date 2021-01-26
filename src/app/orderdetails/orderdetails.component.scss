@@ -20,6 +20,11 @@
   margin-top: 50px;
 
 }
+.pdf{
+  margin-left: 77%;
+  width: 15%;
+  margin-top: -3%;
+}
 @media screen and (max-width:500px) {
 
   .card-1 {
@@ -29,6 +34,7 @@
      margin-bottom: 10px;
      margin-top: 1px;
   }
+
   container{
       width:100%;
       float: left;
@@ -51,4 +57,10 @@
   .hg{
     margin-top: 1px;
   }
+  .pdf{
+    margin-left: 50%;
+    width: 46%;
+    margin-top: 1%;
+  }
+
   }
