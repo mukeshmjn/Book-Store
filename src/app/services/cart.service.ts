@@ -6,7 +6,7 @@ import { Home } from 'src/app/home.model';
   providedIn: 'root'
 })
 export class CartService {
-
+fid:any
 
 
 
@@ -14,11 +14,12 @@ export class CartService {
 
 
   getBooks() {
-    return this.firestore.collection('cart').snapshotChanges();
+    this.fid= localStorage.getItem('fid')
+    return this.firestore.collection(`users/${this.fid}/cart`).snapshotChanges();
 }
 
 deleteBook(homeId: string){
-  this.firestore.doc('cart/' + homeId).delete();
+  this.firestore.collection(`users/${this.fid}/cart`).doc(homeId).delete();
   debugger
 }
 

@@ -5,11 +5,12 @@ import { Orders } from 'src/app/orders.model'
   providedIn: 'root'
 })
 export class OrdersService {
-
+fid:any
   constructor(private firestore: AngularFirestore) { }
 
   getOrders() {
-    return this.firestore.collection('orders').snapshotChanges();
+    this.fid= localStorage.getItem('fid')
+    return this.firestore.collection(`users/${this.fid}/orders`).snapshotChanges();
 }
 
 }

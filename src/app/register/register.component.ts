@@ -74,6 +74,7 @@ export class RegisterComponent implements OnInit {
       console.log('Success!', value);
      
       var suid = value.user.uid;
+      localStorage.setItem('fid',suid);
       this.firestore.collection('users').doc(suid).set({
 
       firstName: this.firstName,

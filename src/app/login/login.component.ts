@@ -59,6 +59,8 @@ export class LoginComponent implements OnInit {
        console.log('Nice, it worked!');
          console.log(value)
          var luid = value.user.uid;
+         localStorage.setItem('fid',luid);
+         debugger
         this.firestore.collection('users').doc(luid).get().subscribe(snapshot=>{
         
         this.user = snapshot.data();

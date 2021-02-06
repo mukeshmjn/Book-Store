@@ -22,6 +22,7 @@ import {
 export class HomeComponent implements OnInit {
   myArray: any[] = []
   books: Home[];
+  fid:any
   email: any;
   searchText:string;
   pno:any;
@@ -78,8 +79,8 @@ export class HomeComponent implements OnInit {
      
       console.log(abc)
       
-
-  this.firestore.collection('cart').add({
+  this.fid= localStorage.getItem('fid')
+  this.firestore.collection(`users/${this.fid}/cart`).add({
    bookname: abc.bookname,
    author: abc.author,
    price: abc.price,

@@ -16,7 +16,7 @@ export class CheckoutComponent implements OnInit {
   orders: any;
   ordersplaced:any;
   orderstotal:any;
-  
+  fid:any
   constructor(
     private cart: CartService,
     private sendorder:SendorderService,
@@ -73,8 +73,8 @@ onSubmit(){
 
   this.orders.forEach((abc)=>{
     console.log(this.orders)
-
-    this.firestore.collection('orders').add({
+    this.fid= localStorage.getItem('fid')
+    this.firestore.collection(`users/${this.fid}/orders`).add({
       bookname: abc.bookname,
       author:abc.author,
       pages:abc.pages,
