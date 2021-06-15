@@ -13,19 +13,21 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { RegisterComponent } from './register/register.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-
+import { 
+  AuthGuardService as AuthGuard 
+} from './services/Auth-Guard/auth-guard.service';
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'cart', component: CartComponent},
-  { path: 'checkout', component: CheckoutComponent },
+  { path: 'cart', component: CartComponent,canActivate:[AuthGuard]},
+  { path: 'checkout', component: CheckoutComponent,canActivate:[AuthGuard] },
   { path : 'aboutus', component: AboutComponent},
   { path : 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
-  { path: 'orderconfirmed', component: ConfirmedComponent},
+  { path: 'orderconfirmed', component: ConfirmedComponent,canActivate:[AuthGuard]},
   {path: 'productdetails', component: ProductdetailsComponent},
-  { path: 'orderdetails', component: OrderdetailsComponent},
+  { path: 'orderdetails', component: OrderdetailsComponent,canActivate:[AuthGuard]},
   { path: 'contactus', component: ContactComponent},
-  { path: 'orders', component: OrdersComponent},
+  { path: 'orders', component: OrdersComponent,canActivate:[AuthGuard]},
   { path: '', redirectTo: '/home',pathMatch: 'full'},
   {
     path: "**",

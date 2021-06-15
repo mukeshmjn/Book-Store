@@ -7,7 +7,8 @@ import { CartService } from '../services/cart.service';
 import { Home } from 'src/app/home.model';
 import { HomeService } from '../services/home.service';
 import { ReactiveFormsModule } from "@angular/forms";
-import { ProductdetailService } from '../services/productdetail.service'
+import { ProductdetailService } from '../services/productdetail.service';
+import { AuthService } from '../services/auth.service';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
@@ -37,7 +38,7 @@ export class HomeComponent implements OnInit {
 
 
  
-  constructor(private firestore: AngularFirestore,
+  constructor(public authService: AuthService,private firestore: AngularFirestore,
     private afStorage: AngularFireStorage,
     private cart: CartService,
     private _snackBar: MatSnackBar,
@@ -76,27 +77,37 @@ export class HomeComponent implements OnInit {
     }
 
     addtocart(abc){
-     
-      console.log(abc)
       
-  this.fid= localStorage.getItem('fid')
-  this.firestore.collection(`users/${this.fid}/cart`).add({
-   bookname: abc.bookname,
-   author: abc.author,
-   price: abc.price,
-   image:abc.image,
-   pages:abc.pages
-
-})
-.then(res => {
-    console.log(res);
- 
- 
-})
-.catch(e => {
-    console.log(e);
-})
-
+      this.authService.user.subscribe(data=>{
+        console.log('add:',data)
+        if((data)){
+          
+         console.log(abc)
+         
+     this.fid= localStorage.getItem('fid')
+     this.firestore.collection(`users/${this.fid}/cart`).add({
+      bookname: abc.bookname,
+      author: abc.author,
+      price: abc.price,
+      image:abc.image,
+      pages:abc.pages
+   
+   })
+   .then(res => {
+       console.log(res);
+    this.openSnackBar1()
+    
+   })
+   .catch(e => {
+       console.log(e);
+   })
+   
+        }
+        else{
+          debugger
+         this.openSnackBar2();
+        }
+      })
 
      
     }
@@ -109,7 +120,7 @@ export class HomeComponent implements OnInit {
 
 
   
-    openSnackBar() {
+    openSnackBar1() {
       console.log('snackbar hai g')
     
       this._snackBar.open('Product has been added to Cart', 'Thanks', {
@@ -120,5 +131,15 @@ export class HomeComponent implements OnInit {
       });
     }
   
+    openSnackBar2() {
+      console.log('snackbar hai g')
+    
+      this._snackBar.open('Please login/register first!!', 'Thanks', {
+        duration: 500,
+       
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+      });
+    }
 
 }
